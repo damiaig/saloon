@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="admin.css" rel="stylesheet" />
+  <title>Admin PAGE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+</head>
+<body>
+  <h1 class="h1">ADMIN
+      PANEL
+  </h1>
+ <!-- Loader Overlay -->
+<div class="loader-overlay">
+  <div class="loader"></div>
+</div>
+
+<div class="sepa"></div>
+  <div class="page-divider">
+    <!-- LEFT: Photo Uploader -->
+    <div class="importer-photo-left">
+      <div class="fafa">
+      <h2>Upload Image</h2>
+      <label for="photoInput" class="custom-file-label">Import Image</label>
+      <input type="file" id="photoInput" accept="image/*" style="display:none" />      
+      <button id="uploadBtn" style="display:none">Upload</button>
+      <p id="uploadStatus"></p></div>
+       
+      <div class="image-slider-frame"></div>
+      <div class="cha"></div>
+      
+
+<ul class="delete">
+
+</ul>
+<div class="btn"></div>
+
+    </div>
+
+    <!-- RIGHT: Firestore sections -->
+ 
+      <div class="customers">
+        <h2 class="bubu">Bookings</h2>
+<!-- Trigger Button -->
+<div class="mimi"><button id="open-availability-modal">Edit Availability</button></div>
+ 
+
+<!-- Modal -->
+<div id="availability-modal" class="modal">
+  <div class="modal-content">
+ 
+    <h2>Set Your Availability</h2>
+    <input type="text" id="weekly-availability" placeholder="Pick your available days" readonly>
+    <div id="inline-availability-calendar"></div>
+    <!-- Time Picker Modal -->
+    <div id="time-picker-modal" class="time-modal" style="display: none;"></div>
+
+    <div class="button-container">
+      <button class="save-availability" id="open-modal">Set Time</button>
+      <button  id="save-availability" class="save-availability">Save</button>
+    </div>
+    <div id="time-modal" class="time-modal">
+      <div class="time-modal-content">
+        <span class="close">&times;</span>
+        <h3>Select Time</h3>
+        <div id="days-time-list">
+          
+        </div> <!-- dynamic content goes here -->
+        <div id="select-timing" class="modal">
+    
+ 
+            <div class="time-content">
+              <span class="close-select-timing" >&times;</span>
+              <h3>Select Time</h3>
+              <p>Start Time</p>
+              <div class="time-picker start-time">
+                <div class="ya">
+                  <label for="start-hour">Hour</label>
+                  <select class="start-hour">
+                    <option disabled selected>00</option>
+                    <option>07</option><option>08</option><option>09</option><option>10</option>
+                    <option>11</option><option>12</option><option>13</option><option>14</option>
+                    <option>15</option><option>16</option><option>17</option><option>18</option>
+                    <option>19</option><option>20</option>
+                  </select>
+                </div>
+                <span class="colon">:</span>
+                <div class="ya">
+                  <label for="start-minute">Minute</label>
+                  <select class="start-minute">
+                    <option disabled selected>00</option>
+                    <option>00</option><option>15</option><option>30</option><option>45</option>
+                  </select>
+                </div>
+              </div>
+        
+              <p style="margin-top: 10px;">End Time</p>
+              <div class="time-picker end-time">
+                <div class="ya">
+                  <label for="end-hour">Hour</label>
+                  <select class="end-hour">
+                    <option disabled selected>00</option>
+                    <option>07</option><option>08</option><option>09</option><option>10</option>
+                    <option>11</option><option>12</option><option>13</option><option>14</option>
+                    <option>15</option><option>16</option><option>17</option><option>18</option>
+                    <option>19</option><option>20</option>
+                  </select>
+                </div>
+                <span class="colon">:</span>
+                <div class="ya">
+                  <label for="end-minute">Minute</label>
+                  <select class="end-minute">
+                    <option disabled selected>00</option>
+                    <option>00</option><option>15</option><option>30</option><option>45</option>
+                  </select>
+                </div>
+              </div>
+        
+              <button id="save-time-btn">Save Time</button>
+            </div>
+  
+        </div>
+        
+        <button class="confirm-availability">Confirm Time</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+    <p class="filter-text">FILTER:</p>
+      <div class="filter-modal">
+        
+        <input id="nameInput" class="name" placeholder="name">
+        <input id="searchInput" class="code" placeholder="code">
+        <input type="date" id="dateInput" class="date">
+        <div>     <label for="hour">Hour</label>
+          <select id="hourInput" class="hour">
+            <option value="">--</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+          </select></div>
+    
+        
+        </div>
+        <div class="separator"></div>
+        <div id="ordersContainer" class="pendinc-customers-list"></div>
+
+
+ 
+  </div>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="admin.js"></script>
+</body>
+
+</html>

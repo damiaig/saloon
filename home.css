@@ -1,0 +1,767 @@
+body {
+    margin: 0;
+    padding: 0;
+   font-family: "SF Pro Display";
+    font-style: normal;
+ 
+    font-weight: 400;
+    overflow-x: hidden !important;
+ 
+    src: url("SFProDisplay-Regular.ttf");
+    background-color: white;
+    color: #980c0c;
+}
+
+
+
+ul {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: light !important;
+    src: url("SFProText-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 300;
+    src: url("SFProText-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 400;
+    src: url("SFProText-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 500;
+    src: url("SFProText-Medium.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 600;
+    src: url("SFProText-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 700;
+    src: url("SFProText-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 900;
+    src: url("SFProText-Heavy.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 100;
+    src: url("SFProDisplay-Ultralight.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 200;
+    src: url("SFProDisplay-Thin.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 300;
+    src: url("SFProDisplay-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    src: url("SFProDisplay-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    src: url("SFProDisplay-Medium.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    src: url("SFProDisplay-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    src: url("SFProDisplay-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    src: url("SFProDisplay-Black.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 900;
+    src: url("SFProDisplay-Heavy.ttf");
+  }
+  
+
+
+.logoo
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+.mapp{
+ 
+    position: relative;
+    right: 15px;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e9e7e7;
+    border-radius: 50px;
+    height: 60px;
+    width: 90%;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    top:20px;
+
+    position: relative;
+}
+
+.logo {
+ top:5px;
+    height:50px;
+    position: relative;
+  
+}
+@media (max-width: 700px) {
+.logo {
+ top:0px;
+    height:50px;
+    position: relative;
+  
+}}
+
+
+.map {
+    height: 50px;
+ 
+}
+
+.h1 {
+    font-size: 120px;
+    width: 750px;
+    position: relative;
+    top:-80px;
+    margin-bottom: 20px; /* Adds 20px spacing below */
+    text-align: center; /* Centers text */
+}
+
+.h1-text {
+    font-size: 18px;
+    width: 450px;
+    position: relative;
+    top:-80px;
+        font-family: "SF Pro Text";
+        font-style: normal;
+        font-weight: 100;
+        src: url("SFProText-Light.ttf");
+ 
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+    font-weight: 100;
+    font-size: 18px !important;
+}
+
+nav ul li {
+    display: inline;
+}
+ 
+nav ul li a {
+    text-decoration: none;
+    color: #980c0c; /* Dark danger red */
+    font-weight: 100;
+    font-size: 18px !important;
+    position: relative; /* Needed for the pseudo-element */
+    display: inline-block;
+    padding-bottom: 5px; /* Adds space between text and underline */
+}
+
+.whatsap{
+    top:12px;
+    position: absolute;
+    right: 65px;
+}
+.calll{
+    top:12px;
+    position: absolute;
+    left: 60px;
+ }
+/* Sliding Underline Effect */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Start from the center */
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #980c0c; /* Same as text color */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* Hover Effect */
+nav ul li a:hover::after {
+    width: 100%; /* Expands fully on hover */
+}
+
+
+/* Page Divider */
+.page-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Custom Input Div */
+.custom-input {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    width: 350px;
+    border: none;
+    position: relative;
+    top:-50px;  
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+/* Input */
+.custom-input input {
+    flex: 1;
+    border: none;
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 100;
+    src: url("SFProDisplay-Heavy.ttf");
+color: #980c0c;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* Button with Arrow */
+.submit-btn {
+    background: #980c0c;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    font-size: 24px; /* Increases arrow/button size */
+}
+@media (max-width: 330px) {
+    .custom-input {
+ right: 5px;
+      
+    }}
+
+/* Responsive Input for Smaller Screens */
+@media (max-width: 600px) {
+    .custom-input {
+ 
+        margin-right: auto;
+        margin-left: auto;
+        width: 270px; /* Smaller width */
+        padding: 8px 12px; /* Slightly reduced padding */
+    }
+
+    .custom-input input {
+        font-size: 16px; /* Adjusts font size */
+    }
+
+    .submit-btn {
+        
+        padding: 6px 8px; /* Adjusts padding for better touch */
+    }
+}
+
+/* Image Slider Frame */
+.slider-image.active {
+    opacity: 1; /* Make active image visible */
+}
+
+/* Left & Right Navigation Arrows */
+.image-slider-frame .left,
+.image-slider-frame .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease !important;
+    cursor: pointer;
+}
+.image-slider-frame .left:hover,
+.image-slider-frame .right:hover {
+    transform: translateY(-50%) scale(1.1) !important;
+}
+.image-slider-frame .left {
+    z-index: 9999;
+    left: 5px; /* Now fully at the far left */
+}
+
+.image-slider-frame .right {
+      z-index: 9999;
+    right: 5px; /* Now fully at the far right */
+}
+/* Dots Transition */
+.dot {
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+}
+.dot:hover {
+    transform: scale(1.3) !important;
+}
+
+/* Responsive Shrinking */
+ 
+
+@media (max-width: 500px) {
+    .image-slider-frame {
+ 
+        min-width: 305px !important; /* Forces 220px width */
+        max-width: 305px !important; /* Ensures it doesn’t go above 220px */
+    }
+}
+
+
+@media (max-width: 450px) {
+    .image-slider-frame {
+ right:5px;
+        min-width: 270px !important; /* Forces 220px width */
+        max-width: 270px !important; /* Ensures it doesn’t go above 220px */
+    }
+}
+
+ 
+
+@media (max-width: 400px) {
+    .image-slider-frame {
+        min-width: 265px !important; /* Forces 220px width */
+        max-width: 265px !important; /* Ensures it doesn’t go above 220px */
+  }
+}
+
+@media (max-width: 350px) {
+    .image-slider-frame {
+  
+        min-width: 245px !important; /* Forces 220px width */
+        max-width: 245px !important; /* Ensures it doesn’t go above 220px */
+       }
+}
+
+@media (max-width: 1000px) {
+    .h1-text {
+        font-size: 16px;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   
+    
+ 
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .h1-text{
+  
+        top:-50px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .h1-text{
+        top:-30px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .h1-text{
+        margin-bottom: 70px;
+        top:-20px;
+    }
+}
+@media (max-width: 340px) {
+    .h1-text{
+     
+font-size: 15px;
+    }
+}
+ 
+.logoo {
+ 
+    position: relative;
+ left: 15px;
+        }
+        @media (max-width: 700px) {
+            header{
+                background-color: #e9e7e7;
+            }
+            .nav-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #e9e7e7;              border-radius: 0px;
+                height: 40px;
+                min-width: 100%;
+                max-width: 100%;
+            }
+        
+            .whatsap{
+                top:-4px;
+                position: absolute;
+                right: 50px;
+            }
+        
+            .calll{
+                top:-5px;
+                position: relative;
+                left: 25px;
+             }
+        
+        
+        
+            .mapp {
+                right:5px;
+                top:-7px;}
+                .logoo {
+                    top:-5px;
+                    left:25px;
+                           margin-left: auto;
+                           margin-right: auto;
+                       }
+        
+            .logo {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        
+            nav ul li a {
+                display: none;
+                text-decoration: none;
+                color: #980c0c; /* Dark danger red */
+                font-weight: 100;
+                font-size: 16px;
+            }
+        }
+
+
+@media (max-width: 1000px) {
+    .h1{
+        font-size: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px ;
+        top:-60px;
+    }
+}
+
+@media (max-width: 800px) {
+    .h1{
+        font-size: 80px;
+        width: 500px ;
+        margin-left: auto;
+        margin-right: auto;
+        top:-40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .h1{
+        font-size: 70px;
+        width: 450px ;
+        margin-left: auto;
+        margin-right: auto;
+        top:-20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .h1{
+        font-size: 60px;
+        width: 400px ;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .h1{
+        font-size: 50px;
+        width: 350px ;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 340px) {
+    .h1{
+        font-size: 45px;
+        width: 300px ;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Media Query: Shrinks frame down to 400px on smaller screens */
+@media (max-width: 600px) {
+    .image-slider-frame {
+      max-width: 350px ;
+    }
+}
+
+/* Slider Dots (Placeholder) */
+
+ 
+.divaaa {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e9e7e7;
+    color: white;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    overflow: hidden;
+}
+
+/* Make sure divaaa is only available under 700px */
+@media (max-width: 700px) {
+    .divaaa{
+        display: none; /* Ensures it's not displayed until activated */
+    }
+    .hamburger-menu {
+        display: block !important;
+    }
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    cursor: pointer;
+    position: relative;
+ left: 10px;
+ top: -10px;
+ display: none;
+    z-index: 1100; /* Ensures it stays above divaaa */
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #980c0c;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* When hamburger is active, animate it */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Prevent scrolling when divaaa is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+
+.divaaa ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.divaaa ul li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 25px; /* Space for round bullet */
+}
+
+.divaaa ul li::before {
+    content: "•"; /* Bullet */
+    position: relative;
+    left: -5px;
+    top: 65px;
+    color: #980c0c; /* Red bullet */
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.slide-links {
+    color: #980c0c; /* Red font for side links */
+    text-decoration: none;
+    font-size: 38px; /* Bigger font */
+    font-weight: 100; /* Extremely light */
+    display: block;
+    position: relative; /* Relative positioning */
+    margin-left: 15px; /* Space from left */
+    top:30px;
+}
+
+.slide-links:hover {
+    text-decoration: underline;
+}
+
+/* Aligning spans horizontally */
+.icon-container {
+    display: flex;
+ align-items: center;
+ justify-content: center;
+    gap: 25px; /* Space between icons */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px; /* Positioning 300px below side links */
+}
+
+
+
+
+svg{ cursor: pointer;}
+
+
+
+
+
+.slider-dots {
+ 
+    height: 40px;
+       position: relative;
+       align-items: center !important;
+       justify-content: center;
+       display: flex;
+       gap: 6px;
+       
+   }
+   
+   .dot {
+       width: 10px;
+       height: 10px;
+       background-color: #ccc;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+   
+   .dot.active {
+       background-color: #980c0c;
+   }
+   
+   .more-dots {
+       color: #980c0c;
+       font-size: 16px;
+       margin-left: 5px;
+   }
+   
+
+
+   .image-slider-frame {
+    margin-left: auto;
+    margin-right: auto;
+      width: 80%; /* Adjusts to 80% of parent container */
+      max-width: 400px; /* Maximum width */
+      min-width: 400px; /* Minimum width to prevent shrinking too much */
+      aspect-ratio: 4 / 5; /* Ensures 4:5 aspect ratio */
+      background-color: #f1f1f1; /* Light gray background */
+      border-radius: 20px; /* Rounded corners */
+      border: 10px solid #980c0c; /* Adds 10px border */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden; /* Prevents content from overflowing */
+      margin-top: 20px;
+      transition: opacity 1s ease-in-out; /* Smooth fade transition for image change */
+  }
+  
+  /* Image Transition */
+  .slider-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures image fills the frame properly */
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 10px; /* Soft corners */
+      opacity: 0; /* Start as invisible */
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth fade and transform transition */
+  }
+
+
+.bi-instagram, .location, .call, .whatsapp{
+    cursor: pointer;
+}

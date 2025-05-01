@@ -1,0 +1,1358 @@
+ 
+
+body {
+  margin: 0;
+  padding: 0;
+ font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("SFProDisplay-Regular.ttf");
+  background-color: white;
+    overflow-x: hidden !important;
+  color: #980c0c;
+}
+ 
+
+html{
+       overflow-x: hidden !important; 
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  src: url("SFProText-Light.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  src: url("SFProText-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 500;
+  src: url("SFProText-Medium.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 600;
+  src: url("SFProText-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 700;
+  src: url("SFProText-Bold.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 900;
+  src: url("SFProText-Heavy.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 100;
+  src: url("SFProDisplay-Ultralight.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 200;
+  src: url("SFProDisplay-Thin.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 300;
+  src: url("SFProDisplay-Light.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("SFProDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("SFProDisplay-Medium.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("SFProDisplay-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("SFProDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 800;
+  src: url("SFProDisplay-Black.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("SFProDisplay-Heavy.ttf");
+}
+
+.h1{
+  text-align: center;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 900;
+  src: url("SFProText-Heavy.ttf");
+}
+
+.page-divider {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+ 
+.importer-photo-left,
+.customers {
+  width: 50%;
+  background: #f9f9f9;
+  height: 950px ;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Add transition to the image */
+.sepa{
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+height: 2px;
+display: none;
+margin-bottom: 50px;
+background-color: #980c0c;
+} 
+ 
+@media (max-width: 850px) {
+  .page-divider {
+    flex-direction: column;  /* Stacks the items vertically */
+    align-items: center;     /* Centers the content */
+  }
+
+
+
+  
+  
+
+
+  .sepa{
+  display: block;
+  } 
+   
+
+  .importer-photo-left,
+  .customers {
+    width: 100% !important;  /* Takes full width when stacked */
+    margin-bottom: 20px;  /* Adds some space between the stacked items */
+  }
+
+  .importer-photo-left:last-child,
+  .customers:last-child {
+    margin-bottom: 0;  /* Removes bottom margin from the last element */
+  }
+}
+/* When image is active */
+.slider-image.active {
+    opacity: 1;
+}
+
+/* Optional: Smooth transitions for arrows and dots */
+.image-slider-frame .left,
+.image-slider-frame .right {
+    transition: transform 0.3s ease !important;
+    cursor: pointer;
+}
+
+.image-slider-frame .left:hover,
+.image-slider-frame .right:hover {
+    transform: translateY(-50%) scale(1.1) !important;
+}
+
+.dot {
+ margin-top: 30px;
+ margin-bottom: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+}
+
+.dot:hover {
+    transform: scale(1.3) !important;
+}
+/* Image Slider Frame */
+.image-slider-frame {
+  margin-left: auto;
+  margin-right: auto;
+    width: 80%; /* Adjusts to 80% of parent container */
+    max-width: 300px; /* Maximum width */
+    min-width: 300px; /* Minimum width to prevent shrinking too much */
+    aspect-ratio: 4 / 5; /* Ensures 4:5 aspect ratio */
+    background-color: #f1f1f1; /* Light gray background */
+    border-radius: 20px; /* Rounded corners */
+    border: 10px solid #980c0c; /* Adds 10px border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Prevents content from overflowing */
+    margin-top: 50px;
+    transition: opacity 1s ease-in-out; /* Smooth fade transition for image change */
+}
+
+/* Image Transition */
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the frame properly */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px; /* Soft corners */
+    opacity: 0; /* Start as invisible */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth fade and transform transition */
+}
+h2{
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 600;
+  src: url("SFProText-Medium.ttf");
+  text-align: center;
+}
+/* When image is active */
+.slider-image.active {
+    opacity: 1; /* Make active image visible */
+}
+
+/* Left & Right Navigation Arrows */
+.image-slider-frame .left,
+.image-slider-frame .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease !important;
+    cursor: pointer;
+}
+.image-slider-frame .left:hover,
+.image-slider-frame .right:hover {
+    transform: translateY(-50%) scale(1.1) !important;
+}
+
+/* Dots Transition */
+.dot {
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+}
+.dot:hover {
+    transform: scale(1.3) !important;
+}
+
+/* Responsive Shrinking */
+@media (max-width: 400px) {
+    .image-slider-frame {
+        min-width: 265px !important;
+        max-width: 265px !important;
+    }
+}
+
+ 
+
+/* Adjusted to be fully at the far left and right */
+.image-slider-frame .left {
+    z-index: 9999;
+    left: 5px; /* Now fully at the far left */
+}
+
+.image-slider-frame .right {
+      z-index: 9999;
+    right: 5px; /* Now fully at the far right */
+}
+
+/* Responsive Shrinking */
+@media (max-width: 400px) {
+    .image-slider-frame {
+right:3px;
+        min-width: 265px !important; /* Forces 220px width */
+        max-width: 265px !important; /* Ensures it doesn’t go above 220px */
+    }
+}
+
+@media (max-width: 500px) {
+    .image-slider-frame {
+right:3px;
+        min-width: 305px !important; /* Forces 220px width */
+        max-width: 305px !important; /* Ensures it doesn’t go above 220px */
+    }
+}
+
+
+
+.slider-dots {
+ 
+ height: 40px;
+    position: relative;
+    align-items: center !important;
+    justify-content: center;
+    display: flex;
+    gap: 6px;
+    
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #980c0c;
+}
+
+.more-dots {
+    color: #980c0c;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+
+
+
+
+ul.delete {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+    max-height: 200px; /* fixed height */
+    overflow-y: auto;  /* enables scroll */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    scrollbar-width: thin;
+    scrollbar-color: #aaa #f9f9f9;
+  }
+  
+  ul.delete::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ul.delete::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 4px;
+  }
+  
+  .customers p{
+   margin-top: 30px;
+    text-align: left;
+    margin-bottom: -5px;
+  }
+  ul.delete li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    transition: background 0.2s ease;
+  }
+  
+  ul.delete li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  ul.delete li:last-child {
+    margin-bottom: 0;
+  }
+  
+  ul.delete li span {
+    color: #d9534f;
+    font-weight: bold;
+    font-size: 26px !important; /* 🔺 Increased size */
+    cursor: pointer;
+    margin-left: 16px;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+  
+  ul.delete li span:hover {
+    color: #b52b27;
+    transform: scale(1.2); /* 🔥 Adds a pop on hover */
+  }
+  
+  
+ 
+  
+
+  ul.delete {
+    max-height: 200px;
+    overflow-y: auto;
+    /* scroll styling already included */
+  }
+
+  
+
+  #save {
+    display: inline-block;
+    background-color: #980c0c;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #uploadBtn:hover {
+    background-color: #b52b27;
+    transform: scale(1.05);
+  }
+  
+.fafa{
+  text-align: center;
+}
+
+.fafa h2{
+  margin-bottom: 25px;
+}
+
+
+.fafa h2, .bubu {
+ 
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  src: url("SFProText-Regular.ttf");
+}
+
+ 
+
+  .custom-file-label{
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  padding: 6px 30px;
+  background-color: #980c0c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin-top: 0px;
+
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid #980c0c;
+  width: 150px !important;
+  box-sizing: border-box;
+}
+
+.custom-file-label:hover {
+  background-color: white;
+  color: #980c0c;
+  border: 1px solid #980c0c;
+}
+
+  
+
+  .custom-save-btn {
+    background-color: #980c0c;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+ 
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    src: url("SFProText-Medium.ttf");
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .custom-save-btn:hover {
+    background-color: #b21818;
+    transform: scale(1.05);
+  }
+  
+  .custom-save-btn:active {
+    background-color: #7a0a0a;
+    transform: scale(0.98);
+  }
+  
+
+  .btn{
+   text-align: center;
+    width: 100%;
+ 
+  }
+
+
+  .cha{
+ margin-bottom: -25px;
+    height: 40px;
+ width: 200px;
+ margin-left: auto;
+ top: 20px;
+ margin-right: auto;
+ align-content: center;
+ position: relative;
+  }
+
+
+
+
+
+ 
+
+/* Page layout */
+.page-divider {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.pendinc-customers-list
+
+
+.customers {
+  text-align: center;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Filter modal */
+.filter-modal {
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-modal input,
+.filter-modal select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+/* Customer display layout */
+.pendinc-customers-list {
+  margin-top: 20px;
+  height: 600px;
+  overflow-y: auto;
+}
+
+.pendinc-customers-list{
+justify-content: center;
+width: 100%;
+}
+.name, .code{
+  width: 50px;
+  color: #980c0c;
+  border: 1px solid #980c0c;
+}
+.customer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+.name, .code{
+  outline:none;
+ 
+}
+/* Booking number (20%) */
+.booking-number {
+  flex: 0 0 20%;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Time (60%) */
+.time-from-now {
+  flex: 0 0 60%;
+  display: flex;
+  color: #980c0c;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+ 
+}
+
+/* Price + Details (20%) */
+.price-piercing {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+
+
+@media(max-width: 500px) {
+  .customer {
+    flex-direction: column;  /* Stacks the items vertically */
+    align-items: center;  /* Aligns items to the left */
+  }
+
+  .piercing-details-modal {
+    display: none;
+    position: absolute;
+    right: 0px !important;
+    top: 340px !important;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    width: 290px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+
+  .booking-number,
+  .time-from-now,
+  .price-piercing {
+    margin-top: 40px !important;
+    flex: 0 0 100%;  /* Each item takes full width */
+    text-align: center;  /* Aligns text to the left */
+  }
+
+  .price-piercing {
+    margin-top: 10px;  /* Adds some space between the price and the other elements */
+  }
+}
+
+@media(max-width: 400px) {
+  .piercing-details-modal {
+    display: none;
+    position: absolute;
+    right: 0px !important;
+    top: 340px !important;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    width: 220px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 10;
+  }}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.piercing-button {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  src: url("SFProText-Light.ttf");
+  padding: 6px 10px;
+  background-color: #980c0c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid #980c0c;
+}
+
+.piercing-button:hover {
+  background-color: white;
+color: #980c0c;
+border: 1px solid #980c0c;
+}
+
+
+.delete-button {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  src: url("SFProText-Light.ttf");
+  padding: 6px 10px;
+  background-color: white;
+  color: #980c0c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid #980c0c;
+}
+
+.delete-button:hover {
+  background-color: #980c0c;
+color: white;
+border: 1px solid #980c0c;
+}
+
+
+
+  
+
+
+
+
+  /* Modal */
+  .piercing-details-modal {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 120px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+  
+  .piercing-details-modal.show {
+    display: block;
+  }
+  
+
+
+
+
+
+
+
+
+  
+
+
+  .separator {
+    margin-top: 15px;
+    margin-bottom: 2px;
+    height: 2px;
+    background-color: #980c0c; /* Thin red line */
+    width: 100%;
+  }
+
+
+  .price{
+    color: #980c0c;
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 300;
+    src: url("SFProText-Light.ttf");
+  }
+
+  @media (max-width: 500px) {
+    .image-slider-frame {
+ 
+        min-width: 305px !important; /* Forces 220px width */
+        max-width: 305px !important; /* Ensures it doesn’t go above 220px */
+    }
+}
+
+
+@media (max-width: 450px) {
+    .image-slider-frame {
+ right:5px;
+        min-width: 270px !important; /* Forces 220px width */
+        max-width: 270px !important; /* Ensures it doesn’t go above 220px */
+    }
+}
+
+ 
+
+@media (max-width: 400px) {
+    .image-slider-frame {
+ 
+        min-width: 245px !important; /* Forces 220px width */
+        max-width: 245px !important; /* Ensures it doesn’t go above 220px */
+    }
+}
+ 
+@media (max-width: 350px) {
+  .image-slider-frame {
+
+      min-width: 215px !important; /* Forces 220px width */
+      max-width: 215px !important; /* Ensures it doesn’t go above 220px */
+  }
+}
+
+
+
+/* Loader Container: Covers whole screen */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* light transparent background */
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* high z-index to stay above all content */
+}
+
+/* The spinning loader */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #fff;
+  animation: l15 1s infinite linear;
+}
+
+.loader::before,
+.loader::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+
+.loader::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+
+@keyframes l15 { 
+  100% { transform: rotate(1turn) }
+}
+
+
+
+#availability-section {
+ 
+  margin: 20px auto;
+  padding: 10px;
+ 
+  border-radius: 8px;
+}
+
+#availability-section h2 {
+  text-align: center;
+}
+
+#weekly-availability {
+  width: 290px;
+  margin: 10px 0;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #980c0c;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  outline: none;
+  font-weight: 300;
+  src: url("SFProText-Light.ttf");
+  border-radius: 4px;
+  background-color: white;
+}
+
+
+
+
+  /* Flatpickr text color */
+  .flatpickr-calendar {
+    margin-left: auto;
+    margin-right: auto;
+    --calendar-accent: #980c0c;
+  }
+
+  .flatpickr-day {
+    color: #980c0c;
+  }
+/* Selected date styling */
+  .flatpickr-day.selected,
+  .flatpickr-day.startRange,
+  .flatpickr-day.endRange {
+    background: #980c0c !important;
+    color: white !important;
+    border:0px ;
+    border-radius: 50% !important;
+  }
+
+  /* Hovered date */
+  .flatpickr-day:hover {
+    background: rgba(152, 12, 12, 0.1);
+  }
+
+ 
+  .flatpickr-day,
+  .flatpickr-month,
+  .flatpickr-weekday,
+  .flatpickr-current-month,
+  .flatpickr-months,
+  .flatpickr-weekdays,
+  .flatpickr-prev-month,
+  .flatpickr-next-month {
+    color: #980c0c !important;
+  }
+
+
+
+/* Red border for disabled (past) days */
+.flatpickr-day.disabled {
+  border: 1px solid red !important;
+  position: relative;
+  color: #980c0c !important;
+  background: #fff !important;
+  opacity: 1 !important;
+  cursor: not-allowed;
+}
+
+/* Diagonal red line across disabled days */
+.flatpickr-day.disabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid red;
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  color: #980c0c;
+ width: 330px;
+  padding: 20px;
+text-align: center;
+  border-radius: 8px; 
+  max-width: 500px;
+}
+
+.close-modal {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+ 
+
+
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  align-items: stretch;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px; /* or any desired fixed width */
+}
+
+.save-availability {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  padding: 6px 10px;
+  background-color: #980c0c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid #980c0c;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.save-availability:hover {
+  background-color: white;
+  color: #980c0c;
+  border: 1px solid #980c0c;
+}
+
+
+
+
+.time-availability {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  padding: 6px 10px;
+  background-color: #980c0c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid #980c0c;
+  width: 100px !important;
+  box-sizing: border-box;
+}
+
+.time-availability:hover {
+  background-color: white;
+  color: #980c0c;
+  border: 1px solid #980c0c;
+}
+
+ 
+.confirm-availability {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  padding: 6px 10px;
+  background-color: #980c0c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin-top: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid #980c0c;
+  width: 150px !important;
+  box-sizing: border-box;
+}
+
+.confirm-availability:hover {
+  background-color: white;
+  color: #980c0c;
+  border: 1px solid #980c0c;
+}
+
+ #close-select-timing{
+ position: absolute;
+  right: 50%;
+  z-index: 99999;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #980c0c;
+ }
+
+#save-time-btn {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  padding: 6px 10px;
+  background-color: #980c0c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin-top: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid #980c0c;
+  width: 150px !important;
+  box-sizing: border-box;
+}
+
+#save-time-btn:hover {
+  background-color: white;
+  color: #980c0c;
+  border: 1px solid #980c0c;
+}
+
+ 
+.time-modal-content .close-select-timing{
+  position: absolute !important;
+   right: 5px;
+   z-index: 99999;
+   top: 10px;
+   font-size: 30px;
+   cursor: pointer;
+   color: #980c0c;
+  }
+#days-time-list{
+  height: 230px !important;
+ 
+  overflow-y: auto;
+}
+
+.time-picker {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 230px;
+}
+
+.time-picker select {
+  padding: 10px;
+  font-size: 36px; /* Large font for selected value */
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #980c0c;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #980c0c;
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: lighter !important;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Change font size when the select dropdown is opened */
+.time-picker select:focus {
+  outline: none;
+  box-shadow: 0 0 5px #980c0c;
+  font-size: 16px;
+}
+
+.time-picker select option {
+  font-size: 36px; /* Smaller font size for options when selecting */
+}
+
+/* Keep the placeholder (disabled option) with normal size */
+.time-picker select option:disabled {
+  color: #bbb; /* Light grey for placeholder */
+  font-weight: normal;
+}
+
+/* The colon in the middle */
+.time-picker .colon {
+  font-size: 80px;
+  font-weight: light;
+  
+  color: #980c0c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin-top: 5px;
+}
+
+
+
+.time-picker label {
+  font-size: 16px;
+  color: #980c0c;
+  position: relative;
+  font-weight: 200;
+  margin-bottom: 0px; /* Space between label and select */
+}
+
+
+.time-picker .ya,
+.time-picker .ya2 {
+ margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* optional: keeps label and select aligned to the left */
+  gap: 2px; /* optional: spacing between label and select */
+}
+.close-select-timing{
+  position: absolute;
+  right: 15px !important;
+  top: 5px !important;
+  font-size: 45px !important;
+  cursor: pointer;
+  color: #980c0c;
+}
+
+.close-modal{
+  position: absolute;
+  right: 15px !important;
+  top: 5px !important;
+  font-size: 45px !important;
+  cursor: pointer;
+  color: #980c0c;
+}
+
+ .time-modal{
+   display: none; 
+   position: fixed;
+   z-index: 9999;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0,0,0,0.5);
+ }
+ 
+ .time-content {
+   background-color: #fff;
+   margin: 10% auto;
+   color: #980c0c;
+   justify-content: center;
+  width: 250px;
+  position: relative;
+   padding: 20px;
+   height: 380px;
+ text-align: center;
+   border-radius: 8px; 
+   max-width: 500px;
+ }
+
+
+ .time-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.time-modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  height: 400px;
+  width: 320px;
+  position: relative;
+  text-align: center;
+}
+ 
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #980c0c;
+}
+/* Style for disabled days like Sundays */
+.flatpickr-day.disabled,
+.flatpickr-day.flatpickr-disabled {
+  opacity: 0.4; /* Dark fade */
+  cursor: not-allowed; /* Stop sign/cross cursor */
+  pointer-events: none; /* Disable interaction */
+  position: relative;
+  border: 1px solid black; /* Black border */
+  background-color: #ccc; /* Light gray background for disabled days */
+}
+
+/* Optional: Add a 🚫 icon in the center of disabled days */
+.flatpickr-day.disabled::after,
+.flatpickr-day.flatpickr-disabled::after {
+  content: "🚫";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.mimi{
+text-align: center;
+  width: 100%;
+ 
+}
+#open-availability-modal{
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  padding: 6px 10px;
+  background-color: #980c0c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin-top: 0px;
+
+  cursor: pointer;
+  font-size: 15px;
+  border: 1px solid #980c0c;
+  width: 150px !important;
+  box-sizing: border-box;
+}
+
+#open-availability-modal:hover {
+  background-color: white;
+  color: #980c0c;
+  border: 1px solid #980c0c;
+}

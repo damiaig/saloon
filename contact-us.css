@@ -1,0 +1,811 @@
+body {
+    margin: 0;
+    padding: 0;
+   font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    overflow-x: hidden !important;
+ 
+    src: url("SFProDisplay-Regular.ttf");
+    background-color: white;
+    color: #980c0c;
+}
+
+
+
+ul {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: light !important;
+    src: url("SFProText-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 300;
+    src: url("SFProText-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 400;
+    src: url("SFProText-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 500;
+    src: url("SFProText-Medium.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 600;
+    src: url("SFProText-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 700;
+    src: url("SFProText-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 900;
+    src: url("SFProText-Heavy.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 100;
+    src: url("SFProDisplay-Ultralight.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 200;
+    src: url("SFProDisplay-Thin.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 300;
+    src: url("SFProDisplay-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    src: url("SFProDisplay-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    src: url("SFProDisplay-Medium.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    src: url("SFProDisplay-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 700;
+    src: url("SFProDisplay-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    src: url("SFProDisplay-Black.ttf");
+  }
+  
+  @font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 900;
+    src: url("SFProDisplay-Heavy.ttf");
+  }
+  
+
+.logoo
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.a{
+    margin-left:5px;
+}
+
+.mailing{
+    top:-5px;
+  right:5px;
+    position: relative;
+}
+.whatsap{
+    top:12px;
+    position: absolute;
+    right: 65px;
+}
+
+
+
+
+.mapp{
+ 
+    position: relative;
+    right: 15px;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e9e7e7;
+    border-radius: 50px;
+    height: 60px;
+    width: 90%;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    top:20px;
+
+    position: relative;
+}
+
+.logo {
+    top:5px;
+       height:50px;
+       position: relative;
+     
+   }
+
+.map {
+    height: 50px;
+ 
+}
+
+ 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px !important;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #980c0c; /* Dark danger red */
+    font-weight: 100;
+    font-size: 18px !important;
+    position: relative; /* Needed for the pseudo-element */
+    display: inline-block;
+    padding-bottom: 5px; /* Adds space between text and underline */
+}
+
+
+
+
+/* Sliding Underline Effect */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Start from the center */
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #980c0c; /* Same as text color */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* Hover Effect */
+nav ul li a:hover::after {
+    width: 100%; /* Expands fully on hover */
+}
+
+.h1 {
+    font-size: 80px;
+    width: 600px;
+    position: relative;
+top:20px;
+margin-left: auto;
+margin-bottom: 30px;
+
+  font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 900;
+    src: url("SFProDisplay-Heavy.ttf");
+  
+
+
+margin-right: auto;
+    margin-bottom: 20px; /* Adds 20px spacing below */
+    text-align: center; /* Centers text */
+}
+ .calll{
+    top:12px;
+    position: absolute;
+    left: 60px;
+ }
+.logoo {
+ 
+    position: relative;
+ left: 15px;
+        }
+@media (max-width: 700px) {
+    header{
+        background-color: #e9e7e7;
+    }
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #e9e7e7;
+        border-radius: 0px;
+        height: 40px;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .whatsap{
+        top:-4px;
+        position: absolute;
+        right: 50px;
+    }
+
+    .calll{
+        top:-5px;
+        position: relative;
+        left: 25px;
+     }
+
+
+
+    .mapp {
+        right:5px;
+        top:-7px;}
+    .logoo {
+ top:-5px;
+ left:25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav ul li a {
+        display: none;
+        text-decoration: none;
+        color: #980c0c; /* Dark danger red */
+        font-weight: 100;
+        font-size: 16px;
+    }
+}
+
+
+
+.divaaa {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e9e7e7;
+    color: white;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    overflow: hidden;
+}
+
+/* Make sure divaaa is only available under 700px */
+@media (max-width: 700px) {
+    .divaaa{
+        display: none; /* Ensures it's not displayed until activated */
+    }
+    .hamburger-menu {
+        display: block !important;
+    }
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    cursor: pointer;
+    position: relative;
+ left: 10px;
+ top: -10px;
+ display: none;
+    z-index: 1100; /* Ensures it stays above divaaa */
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #980c0c;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* When hamburger is active, animate it */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Prevent scrolling when divaaa is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+
+.divaaa ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.divaaa ul li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 25px; /* Space for round bullet */
+}
+
+.divaaa ul li::before {
+    content: "•"; /* Bullet */
+    position: relative;
+    left: -5px;
+    top: 65px;
+    color: #980c0c; /* Red bullet */
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.slide-links {
+    color: #980c0c; /* Red font for side links */
+    text-decoration: none;
+    font-size: 38px; /* Bigger font */
+    font-weight: 100; /* Extremely light */
+    display: block;
+    position: relative; /* Relative positioning */
+    margin-left: 15px; /* Space from left */
+    top:30px;
+}
+
+.slide-links:hover {
+    text-decoration: underline;
+}
+
+ 
+
+@media (max-width: 1000px) {
+    .h1{
+        font-size: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px ;
+  margin-top:40px !important
+    }
+}
+
+@media (max-width: 800px) {
+    .h1{
+        font-size: 60px;
+        width: 500px ;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:40px !important;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .h1{
+        font-size: 60px;
+        width: 450px ;
+        margin-top:40px !important;
+        margin-left: auto;
+        margin-right: auto;
+ 
+    }
+}
+
+@media (max-width: 500px) {
+    .h1{
+        font-size: 55px;
+        width: 400px ;
+        margin-top:50px !important;
+        margin-bottom:20px !important;
+        margin-left: auto;
+        top:5px;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .h1{
+        font-size: 45px;
+        width: 350px ;
+        margin-top:60px !important;
+        margin-bottom:20px !important;
+        margin-left: auto;
+        margin-right: auto;
+     
+    }
+}
+@media (max-width: 350px) {
+    .h1{
+        font-size: 40px;
+        width: 300px ;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+ul{
+    color: #980c0c;
+}
+
+.divider-container {
+    display: flex;
+    height: 500px; /* Full viewport height */
+}
+
+.left-section, .right-section {
+    flex: 1; /* Equal width */
+    display: flex;
+   
+
+    font-size: 24px;
+    color: #980c0c;
+}
+ .right-section {
+    flex: 1; /* Equal width */
+    display: flex;
+   
+    justify-content: center;
+    font-size: 24px;
+    color: #980c0c;
+}
+
+
+
+
+
+
+.h2{
+    width:400px;
+    font-size: 40px;
+    font-weight: 700;
+  
+ 
+}
+.p2{
+    position: relative;
+    left:6px;
+    font-weight: 100;
+    font-size: 18px;
+ margin-bottom: 5px;
+ 
+}
+.small-text{
+   
+    height: auto;
+ position: absolute;
+ left: 193px;
+ margin-top: 15px;
+ 
+
+}
+.small-text p{
+    width: auto;
+  
+    font-weight: 100;
+    font-size: 16px;
+ 
+
+}
+.insta{
+    position: relative;
+    right:2px
+}
+.big-phone{
+    width:400px;
+    height: 400px;
+ position: relative;
+ top:70px;
+}
+
+.left-section li{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.left-section ul{
+    position: absolute;
+    left:160px ;
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 100 !important;
+    src: url("SFProText-Light.ttf");
+ 
+  margin-top: 220px !important;
+    font-size: 20px;
+}
+
+.p1{
+    margin-top: 25px;
+    font-size: 20px !important;
+    position: relative;
+    left: 4px;
+ 
+    
+
+}
+.px{
+    margin-left: 40px;
+    
+}
+
+.mapi{
+    position: relative;
+    top:15px;
+    right:2px
+}
+
+
+
+
+
+/* Aligning spans horizontally */
+.icon-container {
+    display: flex;
+ align-items: center;
+ justify-content: center;
+    gap: 25px; /* Space between icons */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px; /* Positioning 300px below side links */
+}
+
+
+
+
+
+@media (max-width: 1100px) {
+    .p2{
+        position: relative;
+        left:6px;
+        font-weight: 100;
+        font-size: 18px;
+     margin-bottom: 5px;
+     
+    }
+    .small-text{
+       
+        height: auto;
+     position: absolute;
+     left: 103px !important;
+    
+    }
+    .small-text p{
+        width: auto;
+      
+        font-weight: 100;
+        font-size: 16px;
+     
+    
+    }
+    
+    .big-phone{
+        width:300px;
+        height: 300px;
+     position: relative;
+     top:100px;
+    }
+    
+    .left-section li{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .left-section ul{
+        position: absolute;
+        left:70px;
+        margin-top: 180px;
+        font-size: 20px;
+    }
+    
+    .p1{
+        margin-top: 25px;
+        font-size: 20px !important;
+        position: relative;
+        left: 4px;
+     
+        
+    
+    }
+}
+
+
+
+@media (max-width: 900px) {
+ 
+    
+    .big-phone{
+        width:250px !important;
+        height: 250px !important;
+     position: relative;
+     top:100px;
+    }
+   }
+
+.at-media{
+    display: none;
+}
+   @media (max-width: 700px) {
+
+    .big-phone, .right-section, .left-section{
+display: none;
+    }
+   }
+
+
+   @media (max-width: 700px) {
+    .at-media {
+        display: flex !important;
+    }
+
+    footer{
+        margin-top: -100px !important;
+    }
+     
+
+.divider-container{
+    flex:1;
+    background-color: #980c0c;
+display: none;}
+ 
+    
+     
+}
+
+ 
+  
+.at-media {
+    width: 100 vw; /* Full width */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+/* Remove default list styles */
+.at-media ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: -15px;
+ 
+}
+
+.at-media li {
+    background: #f0f0f0; /* Gray background */
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    transition: width 0.3s ease-in-out;
+}
+
+
+
+/* Responsive width adjustments */
+@media (max-width: 700px) {
+    .at-media li { width: 50%; 
+    margin-left: auto;
+margin-right: auto;
+margin-top: 25px;
+margin-bottom: 25px;}
+}
+
+@media (max-width: 600px) {
+    .at-media li { width: 60%; }
+}
+
+@media (max-width: 500px) {
+    .at-media li { width: 70%; }
+}
+
+@media (max-width: 400px) {
+    .at-media li { width: 80%; }
+}
+ 
+.at-media .small-text{
+    width: 330px !important;
+padding: 5px;
+border: 1px solid #980c0c;
+    position: relative;
+    height: auto;
+ 
+ text-align: center;
+align-items: center;
+ left: 0px !important;
+
+
+ height: 60px;
+}
+.kiki{
+    text-align: left;
+}
+.at-media li span{
+width: 200px;
+margin-top: auto;
+margin-bottom: auto;
+margin-left: auto;
+margin-right: auto;
+}
+
+.at-media{
+    align-items:center ;
+}
+
+
+
+
+header svg, .divaaa svg{ cursor: pointer;}
+
+
+footer{
+    margin-top: -30px;
+}
+ 
+
+.bi-instagram, .location, .call, .whatsapp{
+    cursor: pointer;
+}

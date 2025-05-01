@@ -1,0 +1,1736 @@
+body {
+  margin: 0;
+  padding: 0;
+ font-family: "SF Pro Display";
+  font-style: normal;
+  overflow-x: hidden;
+  font-weight: 400;
+  overflow-x: hidden !important;
+ 
+  src: url("SFProDisplay-Regular.ttf");
+  background-color: white;
+  color: #980c0c;
+}
+
+
+ 
+ul {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: light !important;
+  src: url("SFProText-Light.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 300;
+  src: url("SFProText-Light.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  src: url("SFProText-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 500;
+  src: url("SFProText-Medium.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 600;
+  src: url("SFProText-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 700;
+  src: url("SFProText-Bold.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 900;
+  src: url("SFProText-Heavy.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 100;
+  src: url("SFProDisplay-Ultralight.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 200;
+  src: url("SFProDisplay-Thin.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 300;
+  src: url("SFProDisplay-Light.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("SFProDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("SFProDisplay-Medium.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("SFProDisplay-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("SFProDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 800;
+  src: url("SFProDisplay-Black.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("SFProDisplay-Heavy.ttf");
+}
+
+
+.logoo
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+}
+
+.whatsap{
+  top:12px;
+  position: absolute;
+  right: 65px;
+}
+
+.mapp{
+
+  position: relative;
+  right: 15px;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e9e7e7;
+  border-radius: 50px;
+  height: 60px;
+  width: 90%;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  top:20px;
+
+  position: relative;
+}
+
+.logo {
+    top:5px;
+       height:50px;
+       position: relative;
+     
+   }
+   
+
+   @media (max-width: 700px) {
+   .logo {
+    top:0px;
+       height:50px;
+       position: relative;
+     
+   }}
+
+.map {
+  height: 50px;
+
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px !important;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #980c0c; /* Dark danger red */
+  font-weight: 100;
+  font-size: 18px !important;
+  position: relative; /* Needed for the pseudo-element */
+  display: inline-block;
+  padding-bottom: 5px; /* Adds space between text and underline */
+}
+
+
+
+
+/* Sliding Underline Effect */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Start from the center */
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #980c0c; /* Same as text color */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* Hover Effect */
+nav ul li a:hover::after {
+    width: 100%; /* Expands fully on hover */
+}
+
+ 
+ .calll{
+    top:12px;
+    position: absolute;
+    left: 60px;
+ }
+.logoo {
+ 
+    position: relative;
+ left: 15px;
+        }
+@media (max-width: 700px) {
+    header{
+      background-color: #e9e7e7;
+    }
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #e9e7e7;
+        border-radius: 0px;
+        height: 40px;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .whatsap{
+        top:-4px;
+        position: absolute;
+        right: 50px;
+    }
+
+    .calll{
+        top:-5px;
+        position: relative;
+        left: 25px;
+     }
+
+
+
+    .mapp {
+        right:5px;
+        top:-7px;}
+        .logoo {
+          top:-5px;
+          left:25px;
+                 margin-left: auto;
+                 margin-right: auto;
+             }
+
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav ul li a {
+        display: none;
+        text-decoration: none;
+        color: #980c0c; /* Dark danger red */
+        font-weight: 100;
+        font-size: 16px;
+    }
+}
+
+
+
+.divaaa {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #e9e7e7;
+    color: white;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    overflow: hidden;
+}
+
+/* Make sure divaaa is only available under 700px */
+@media (max-width: 700px) {
+    .divaaa{
+        display: none; /* Ensures it's not displayed until activated */
+    }
+    .hamburger-menu {
+        display: block !important;
+    }
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    cursor: pointer;
+    position: relative;
+ left: 10px;
+ top: -10px;
+ display: none;
+    z-index: 1100; /* Ensures it stays above divaaa */
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #980c0c;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* When hamburger is active, animate it */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Prevent scrolling when divaaa is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+
+.divaaa ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.divaaa ul li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 25px; /* Space for round bullet */
+}
+
+.divaaa ul li::before {
+    content: "•"; /* Bullet */
+    position: relative;
+    left: -5px;
+    top: 65px;
+    color: #980c0c; /* Red bullet */
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.slide-links {
+    color: #980c0c; /* Red font for side links */
+    text-decoration: none;
+    font-size: 38px; /* Bigger font */
+    font-weight: 100; /* Extremely light */
+    display: block;
+    position: relative; /* Relative positioning */
+    margin-left: 15px; /* Space from left */
+    top:30px;
+}
+
+.slide-links:hover {
+    text-decoration: underline;
+}
+
+
+
+ 
+
+/* Slider Dots (Placeholder) */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slider-dots span {
+    width: 10px;
+    height: 10px;
+    background-color: #980c0c;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.5;
+}
+
+.slider-dots span.active {
+    opacity: 1;
+}
+
+
+ 
+.divaaa {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:#e8e4ec; /* Dark overlay */
+    color: white;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    overflow: hidden;
+}
+
+/* Make sure divaaa is only available under 700px */
+@media (max-width: 700px) {
+
+  
+    .divaaa{
+        display: none; /* Ensures it's not displayed until activated */
+    }
+
+    .at-media-time, .at-media-sep{
+      display: block !important;
+       }
+
+       .right-side{
+        display: none !important;
+       }
+input, .piercing-btn,.submit,.at-media-time  {
+  width:270px !important;
+}
+.lala label{
+ 
+margin-right: auto;
+}
+
+ 
+
+#at-media-time label{
+  margin-bottom:5px ;
+}
+.lala{
+margin-top: 200px;
+ border-radius: 20px;
+ background-color: #e9e7e7;
+ padding: 25px;
+  max-width: 300px !important;
+  align-items: center;
+}
+.at-media-sep, .separator{
+  width:300px !important;
+}
+#at-media{
+  display: block !important;
+  margin-top:5px !important;
+  margin-bottom: 5px !important;
+}
+.left-side{
+  width: 100% !important;
+  border-right: 0px !important;
+}
+
+#at-media-time{
+  display: flex !important;
+}
+footer{
+  position: relative;
+  top: 200px !important;
+}
+    .hamburger-menu {
+        display: block !important;
+    }
+}
+#at-media{
+  display: none;
+  margin-top:5px !important;
+  margin-bottom: 5px !important;
+}
+
+#at-media-time{
+  display: none;
+  margin-top:5px !important;
+  margin-bottom: 5px !important;
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    cursor: pointer;
+    position: relative;
+ left: 10px;
+ top: -10px;
+ display: none;
+    z-index: 1100; /* Ensures it stays above divaaa */
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #980c0c;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* When hamburger is active, animate it */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Prevent scrolling when divaaa is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+
+.divaaa ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.divaaa ul li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 25px; /* Space for round bullet */
+}
+
+.divaaa ul li::before {
+    content: "•"; /* Bullet */
+    position: relative;
+    left: -5px;
+    top: 65px;
+    color: #980c0c; /* Red bullet */
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.slide-links {
+    color: #980c0c; /* Red font for side links */
+    text-decoration: none;
+    font-size: 38px; /* Bigger font */
+    font-weight: 100; /* Extremely light */
+    display: block;
+    position: relative; /* Relative positioning */
+    margin-left: 15px; /* Space from left */
+    top:30px;
+}
+
+.slide-links:hover {
+    text-decoration: underline;
+}
+
+/* Aligning spans horizontally */
+.icon-container {
+    display: flex;
+ align-items: center;
+ justify-content: center;
+    gap: 25px; /* Space between icons */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px; /* Positioning 300px below side links */
+}
+
+
+.splitter {
+    width: 100%;
+    display: flex !important;
+    margin-bottom: 70px;
+  }
+  
+ 
+ 
+  
+  .right-side {
+ width: 50%;
+    padding: 20px;
+    height: 330px;
+ 
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center */
+  align-items: center;     /* Horizontally center */
+
+
+ 
+
+ 
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: light;
+    src: url("SFProText-Medium.ttf");
+   }
+  
+  /* 🔴 Make today's date border red */
+.flatpickr-day.today {
+    border: 1px solid #980c0c !important;
+    color: #980c0c !important;
+  }
+  
+  
+  .apple-date {
+    appearance: none;
+    background-color: white;
+   color:#980c0c;
+    padding: 10px;
+    
+    font-size: 16px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+
+  
+ 
+ 
+
+ 
+    .select-pierce {
+      flex: 0 0 calc(50% - 10px) !important; /* 2 boxes per row with some spacing */
+    }
+ 
+  
+ 
+  .apple-calendar-shower {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+text-align: center;
+    justify-items: center;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #980c0c;
+  }
+
+  .dataaa{
+    margin-bottom: -15px !important;
+}
+
+  .apple-date {
+    padding: 10px;
+    border: 1px solid #980c0c;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+      
+    margin-bottom: 15px;
+    width: 200px;
+  }
+
+  /* Flatpickr text color */
+  .flatpickr-calendar {
+    --calendar-accent: #980c0c;
+  }
+
+  .flatpickr-day {
+    color: #980c0c;
+  }
+/* Selected date styling */
+  .flatpickr-day.selected,
+  .flatpickr-day.startRange,
+  .flatpickr-day.endRange {
+    background: #980c0c !important;
+    color: white !important;
+    border:0px ;
+    border-radius: 50% !important;
+  }
+
+  /* Hovered date */
+  .flatpickr-day:hover {
+    background: rgba(152, 12, 12, 0.1);
+  }
+
+ 
+  .flatpickr-day,
+  .flatpickr-month,
+  .flatpickr-weekday,
+  .flatpickr-current-month,
+  .flatpickr-months,
+  .flatpickr-weekdays,
+  .flatpickr-prev-month,
+  .flatpickr-next-month {
+    color: #980c0c !important;
+  }
+
+
+
+/* Red border for disabled (past) days */
+.flatpickr-day.disabled {
+  border: 1px solid red !important;
+  position: relative;
+  color: #980c0c !important;
+  background: #fff !important;
+  opacity: 1 !important;
+  cursor: not-allowed;
+}
+
+/* Diagonal red line across disabled days */
+.flatpickr-day.disabled::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid red;
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+
+
+
+
+ header svg, .divaaa svg{ cursor: pointer;}
+
+
+ /* 🔴 Style the left and right arrows */
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  color: #980c0c !important;
+  fill: #980c0c !important;
+  stroke: #980c0c !important;
+  cursor: pointer;
+}
+ 
+
+ 
+.time-picker {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+  
+  .time-picker select {
+    padding: 10px;
+    font-size: 36px; /* Large font for selected value */
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #980c0c;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #980c0c;
+    font-family: "SF Pro Text", sans-serif;
+    font-weight: lighter !important;
+    appearance: none;
+    cursor: pointer;
+  }
+  
+  /* Change font size when the select dropdown is opened */
+  .time-picker select:focus {
+    outline: none;
+    box-shadow: 0 0 5px #980c0c;
+    font-size: 16px;
+  }
+  
+  .time-picker select option {
+    font-size: 36px; /* Smaller font size for options when selecting */
+  }
+  
+  /* Keep the placeholder (disabled option) with normal size */
+  .time-picker select option:disabled {
+    color: #bbb; /* Light grey for placeholder */
+    font-weight: normal;
+  }
+  
+  /* The colon in the middle */
+  .time-picker .colon {
+    font-size: 80px;
+    font-weight: light;
+    
+    color: #980c0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    margin-top: 5px;
+  }
+  
+ 
+  
+.time-picker label {
+    font-size: 16px;
+    color: #980c0c;
+    position: relative;
+    font-weight: 200;
+    margin-bottom: 5px; /* Space between label and select */
+}
+ 
+
+.hh{
+  font-size: 60px;
+  width: 550px;
+ text-align: center;
+  position: relative;
+ margin-top: 80px;
+ margin-right: auto;
+ margin-left: auto;
+height: 150px;
+margin-bottom: 100px !important;
+font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("SFProDisplay-Heavy.ttf");
+}
+
+.left-side {
+  width: 50%;
+  padding: 20px;
+  height: 370px;
+ 
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center */
+  align-items: center;     /* Horizontally center */
+
+
+display: flex;
+ 
+border-right: 1px solid #980c0c;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: light;
+  src: url("SFProText-Medium.ttf");
+}
+
+
+.lala {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+.lala label {
+  font-size: 14px !important;
+  margin-bottom: -8px;
+  display: block;
+  color: #980c0c;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: lighter !important;
+  src: url("SFProText-Medium.ttf");
+  
+
+}
+
+.lala input {
+  padding: 10px;
+  border: 1px solid #980c0c;
+  border-radius: 12px;
+  font-size: 16px;
+  color:#980c0c;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: lighter !important;
+  src: url("SFProText-Medium.ttf");
+outline: none;
+  margin-bottom: 15px;
+  width: 200px;}
+
+.separator {
+  height: 2px;
+  background-color: #980c0c; /* Thin red line */
+  width: 230px;
+}
+ 
+.piercing-btn {
+  margin-top: 5px;
+  background-color: #980c0c;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  text-align: center;
+  font-weight: lighter !important;
+  src: url("SFProText-Medium.ttf");
+  margin-bottom: 5px;
+  width: 205px;
+  color: white;
+  border: none;
+  padding: 10px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.piercing-btn:hover {
+  background-color: #700909;
+}
+
+
+.lala input::placeholder{
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: lighter !important;
+  src: url("SFProText-Medium.ttf");
+}
+
+
+ 
+
+
+
+/* Modal base */
+/* Modal base */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Modal box */
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+top: 30px;
+
+  text-align: center;
+  position: relative;
+  max-height: 450px; /* Optional: prevents overflow if content is tall */
+  overflow-y: auto;  /* Scroll if content overflows vertically */
+}
+
+
+/* Close button */
+.modal-content .close {
+  color: #980c0c;
+  font-size: 48px;
+  font-weight: lighter;
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  cursor: pointer;
+}
+
+ 
+
+ .modal-content h3{
+  margin-top: -10px;
+ }
+
+.type-of-piercing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-height: 280px; /* adjust based on your design */
+  overflow-y: auto;
+  padding-right: 10px; /* prevent content from hiding under scrollbar */
+}
+
+ 
+
+/* 3 per line with spacing */
+.select-pierce {
+ 
+  box-sizing: border-box;
+  border: 2px solid #980c0c;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: white;
+}
+
+.select-pierce:hover {
+  background-color: #fcecec;
+}
+
+.select-pierce.selected {
+  background-color: #980c0c;
+  color: white;
+  font-weight: lighter;
+}
+
+.select-pierce h4 {
+  margin: 8px 0 5px;
+  font-size: 16px;
+  font-weight: light;
+}
+.close
+.select-pierce p {
+  margin: 3px 0;
+  font-size: 14px;
+  font-weight: light;
+}
+
+.total-container {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.piercing-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+ margin-bottom: 20px;
+  border-bottom: 2px solid #980c0c;
+  padding-bottom: 20px;
+}
+#piercingModal{
+  z-index: 99999;}
+#piercingModal .modal-content{
+ 
+  top: 10px !important
+}
+.filter-btn {
+  flex: 0 0 calc(33.333% - 12px);
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  border: 2px solid #980c0c;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #980c0c;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #980c0c;
+  color: white;
+}
+
+
+
+
+
+.selected-row {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+}
+
+.selected-name {
+  flex: 1;
+  font-weight: 400;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  gap: 6px;
+}
+
+.qty-btn {
+  padding: 3px 8px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.qty-display {
+  min-width: 20px;
+  text-align: center;
+}
+
+.selected-price {
+  width: 80px;
+  font-weight: 400;
+  text-align: right;
+}
+
+
+
+ 
+.total-container h4{
+  font-weight: 500;
+  margin-bottom: 0px;
+  text-decoration: underline;
+}
+
+
+
+ .at-media-sep{
+  height: 2px;
+  background-color: #980c0c; /* Thin red line */
+  width: 230px;
+  display: none;
+ }
+
+ 
+
+ .close-confirm {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 44px;
+  font-weight: 300;
+}
+
+
+
+
+.at-media-time{
+  margin-top: 5px;
+  background-color: #980c0c;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  text-align: center;
+  font-weight: lighter !important;
+  src: url("SFProText-Medium.ttf");
+  margin-bottom: 5px;
+  width: 205px;
+  color: white;
+  border: none;
+  padding: 10px;
+display: none;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.at-media-time:hover {
+  background-color: #700909;
+}
+
+
+.submit {
+  margin-top: 5px;
+ 
+  background-color: white !important;
+  border: 1px solid #980c0c !important;
+  color: #980c0c !important;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  text-align: center;
+ 
+  src: url("SFProText-Medium.ttf");
+  margin-bottom: 5px;
+  width: 205px;
+ 
+  border: none;
+  padding: 10px;
+ 
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+ .submit:hover {
+ 
+  background-color: #980c0c !important;
+  border: 1px solid #980c0c !important;
+  color: white !important;
+}
+
+
+ 
+
+
+@media (max-width: 700px) {
+.time-picker2{
+  display: flex !important;
+}
+  .hh{
+    font-size: 45px;
+    width: 450px;
+   text-align: center;
+    position: relative;
+   margin-top: 80px;
+   margin-right: auto;
+   margin-left: auto;
+  height: 150px;
+  margin-bottom: 100px !important;
+  font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 900;
+    src: url("SFProDisplay-Heavy.ttf");
+  }}
+
+
+
+  @media (max-width: 450px) {
+
+    .hh{
+      font-size: 35px;
+      width: 350px;
+     text-align: center;
+      position: relative;
+     margin-top: 80px;
+     margin-right: auto;
+     margin-left: auto;
+    height: 150px;
+    margin-bottom: 60px !important;
+    font-family: "SF Pro Display";
+      font-style: normal;
+      font-weight: 900;
+      src: url("SFProDisplay-Heavy.ttf");
+    }
+  
+
+
+
+
+
+  .lala{
+margin-top: 200px;
+ border-radius: 20px;
+ background-color: #e9e7e7;
+ padding: 25px;
+  max-width: 260px !important;
+  align-items: center;
+}
+.at-media-sep, .separator{
+  width:260px !important;
+}
+#at-media{
+  display: block !important;
+  margin-top:5px !important;
+  margin-bottom: 5px !important;
+}
+.left-side{
+  width: 100% !important;
+  border-right: 0px !important;
+}
+
+.time-picker {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
+
+
+#at-media-time{
+  display: flex !important;
+}
+  
+  input, .piercing-btn,.submit,.at-media-time  {
+  width:230px !important;
+}
+  
+  }
+
+    @media (max-width: 350px) {
+
+
+
+
+  .lala{
+margin-top: 200px;
+ border-radius: 20px;
+ background-color: #e9e7e7;
+ padding: 25px;
+  max-width: 215px !important;
+  align-items: center;
+}
+.at-media-sep, .separator{
+  width:215px !important;
+}
+#at-media{
+  display: block !important;
+  margin-top:5px !important;
+  margin-bottom: 5px !important;
+}
+.left-side{
+  width: 100% !important;
+  border-right: 0px !important;
+}
+
+#at-media-time{
+  display: flex !important;
+}
+.time-picker {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+  }
+  
+  input, .piercing-btn,.submit,.at-media-time  {
+  width:185px !important;
+}
+
+
+
+      .hh{
+        font-size: 30px;
+        width: 300px;
+       text-align: center;
+        position: relative;
+       margin-top: 80px;
+       margin-right: auto;
+       margin-left: auto;
+      height: 150px;
+      margin-bottom: 30px !important;
+      font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 900;
+        src: url("SFProDisplay-Heavy.ttf");
+      }}
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+      /* 🔴 Make today's date border red */
+.flatpickr-day1.today {
+  border: 1px solid #980c0c !important;
+  color: #980c0c !important;
+}
+
+
+.apple-date1 {
+  appearance: none;
+  background-color: white;
+ color:#980c0c;
+  padding: 10px;
+  
+  font-size: 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+
+.apple-calendar-shower {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  justify-items: center;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  color: #980c0c;
+}
+
+.dataaa{
+  margin-bottom: -15px !important;
+}
+
+.apple-date {
+  padding: 10px;
+  border: 1px solid #980c0c;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 15px;
+  width: 200px;
+}
+
+/* Flatpickr text color */
+.flatpickr-calendar {
+  --calendar-accent: #980c0c;
+}
+
+.flatpickr-day {
+  color: #980c0c;
+}
+/* Selected date styling */
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background: #980c0c !important;
+  color: white !important;
+  border:0px ;
+  border-radius: 50% !important;
+}
+
+/* Hovered date */
+.flatpickr-day:hover {
+  background: rgba(152, 12, 12, 0.1);
+}
+
+
+.flatpickr-day,
+.flatpickr-month,
+.flatpickr-weekday,
+.flatpickr-current-month,
+.flatpickr-months,
+.flatpickr-weekdays,
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  color: #980c0c !important;
+}
+
+
+.code {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.code p {
+  margin: 10px 0;
+}
+
+.code h1 {
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: black;
+}
+
+.code small {
+  font-size: 0.9em;
+  color: red;
+  font-weight: bold;
+}
+
+
+ /* Modal styles */
+#confirmation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+
+
+header svg, .divaaa svg{ cursor: pointer;}
+
+
+/* 🔴 Style the left and right arrows */
+.flatpickr-prev-month,
+.flatpickr-next-month {
+color: #980c0c !important;
+fill: #980c0c !important;
+stroke: #980c0c !important;
+cursor: pointer;
+}
+
+
+
+.time-picker2 {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+ display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.time-picker2 select {
+  padding: 10px;
+  font-size: 36px; /* Large font for selected value */
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #980c0c;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #980c0c;
+  font-family: "SF Pro Text", sans-serif;
+  font-weight: lighter !important;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Change font size when the select dropdown is opened */
+.time-picker2 select:focus {
+  outline: none;
+  box-shadow: 0 0 5px #980c0c;
+  font-size: 16px;
+}
+
+.time-picker2 select option {
+  font-size: 36px; /* Smaller font size for options when selecting */
+}
+
+/* Keep the placeholder (disabled option) with normal size */
+.time-picker2 select option:disabled {
+  color: #bbb; /* Light grey for placeholder */
+  font-weight: normal;
+}
+
+/* The colon in the middle */
+.time-picker2 .colon {
+  font-size: 80px;
+  font-weight: light;
+  
+  color: #980c0c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin-top: 5px;
+}
+
+
+
+.time-picker2 label {
+  font-size: 16px;
+  color: #980c0c;
+  position: relative;
+  font-weight: 200;
+  margin-bottom: 5px; /* Space between label and select */
+}
+
+
+
+.pay-grid {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+ 
+  align-items: center; /* Optional: center align horizontally */
+}
+
+
+
+
+.butt{
+
+ 
+  margin-top: 5px;
+ 
+  background-color: #980c0c !important;
+  border: 1px solid #980c0c !important;
+  color: white !important;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  text-align: center;
+ 
+  src: url("SFProText-Medium.ttf");
+  margin-bottom: 5px;
+  width: 150px;
+ 
+  border: none;
+  padding: 10px;
+ 
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.butt:hover {
+ 
+  background-color: white !important;
+  border: 1px solid #980c0c !important;
+  color: #980c0c !important;
+}
+
+
+
+
+
+
+.butt2{
+
+ 
+  margin-top: 5px;
+ 
+  background-color: white !important;
+  border: 1px solid #980c0c !important;
+  color: #980c0c !important;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  text-align: center;
+ 
+  src: url("SFProText-Medium.ttf");
+  margin-bottom: 5px;
+  width: 150px;
+ 
+  border: none;
+  padding: 10px;
+ 
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.butt2:hover {
+ 
+  background-color: #980c0c !important;
+  border: 1px solid #980c0c !important;
+  color: white !important;
+}
+
+
+
+
+
+
+
+
+
+.flatpickr-day.disabled,
+.flatpickr-day.flatpickr-disabled {
+  opacity: 0.4; /* Dark fade */
+  cursor: not-allowed; /* Stop sign/cross cursor */
+  pointer-events: none; /* Disable interaction */
+  position: relative;
+  border: 1px solid black; /* Black border */
+  background-color: #ccc; /* Light gray background for disabled days */
+}
+
+/* Optional: Add a 🚫 icon in the center of disabled days */
+.flatpickr-day.disabled::after,
+.flatpickr-day.flatpickr-disabled::after {
+  content: "🚫";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+
+
+.bi-instagram, .location, .call, .whatsapp{
+  cursor: pointer;
+}
