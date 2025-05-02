@@ -987,7 +987,7 @@ top: 30px;
 
   text-align: center;
   position: relative;
-  max-height: 100vh; /* Optional: prevents overflow if content is tall */
+  max-height: 90vh; /* Optional: prevents overflow if content is tall */
   overflow-y: auto;  /* Scroll if content overflows vertically */
 }
 
