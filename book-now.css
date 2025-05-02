@@ -418,9 +418,15 @@ body.no-scroll {
 .slider-dots span.active {
     opacity: 1;
 }
-
-
+@media (max-width: 450px) {
+.piercing-filters {
+  width: 320px !important;
+}}
  
+@media (max-width: 400px) {
+  .piercing-filters {
+    width: auto !important;
+  }}
 .divaaa {
     display: none; /* Initially hidden */
     position: fixed;
@@ -983,11 +989,11 @@ outline: none;
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
-top: 30px;
+top: 10px !important;
 
   text-align: center;
   position: relative;
-  max-height: 530px; /* Optional: prevents overflow if content is tall */
+  max-height: 520px; /* Optional: prevents overflow if content is tall */
   overflow-y: auto;  /* Scroll if content overflows vertically */
 }
 
@@ -998,7 +1004,8 @@ top: 30px;
   font-size: 48px;
   font-weight: lighter;
   position: absolute;
-  right: 10px;
+  right: 30px !important;
+ 
   top: -5px;
   cursor: pointer;
 }
@@ -1013,16 +1020,18 @@ top: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  max-height: 280px; /* adjust based on your design */
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+ 
+  max-height: 280px;
   overflow-y: auto;
-  padding-right: 10px; /* prevent content from hiding under scrollbar */
+  scrollbar-gutter: stable both-edges;
 }
 
- 
-
-/* 3 per line with spacing */
 .select-pierce {
- 
+  width: 45%;
   box-sizing: border-box;
   border: 2px solid #980c0c;
   border-radius: 8px;
@@ -1032,6 +1041,7 @@ top: 30px;
   transition: 0.3s;
   background-color: white;
 }
+
 
 .select-pierce:hover {
   background-color: #fcecec;
@@ -1048,7 +1058,7 @@ top: 30px;
   font-size: 16px;
   font-weight: light;
 }
-.close
+ 
 .select-pierce p {
   margin: 3px 0;
   font-size: 14px;
@@ -1067,10 +1077,18 @@ top: 30px;
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin-top: 10px;
+  margin-top: 20px;
  margin-bottom: 20px;
-  border-bottom: 2px solid #980c0c;
+ background-color: #980c0c;
+  border-bottom: 0px solid #980c0c;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-top: 20px;
   padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  width: 350px;
 }
 #piercingModal{
   z-index: 99999;}
@@ -1092,10 +1110,10 @@ top: 30px;
   transition: 0.3s ease-in-out;
 }
 
-.filter-btn.active,
-.filter-btn:hover {
-  background-color: #980c0c;
-  color: white;
+.filter-btn.active, .filter-btn:hover {
+  background-color: #FFD700; /* Gold */
+  color: #980c0c;
+  border-color: #FFD700;
 }
 
 
