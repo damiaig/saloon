@@ -2,11 +2,23 @@
     <html lang="en">
         <head>
             <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+            <style>
+                /* Prevent font-based zooming on iOS */
+                input, button, select, textarea {
+                  font-size: 16px;
+                }
+            
+                html, body {
+                  touch-action: manipulation;
+                }
+              </style>
 
             <link href="admin.login.css" rel="stylesheet">
-            <title>Admin PAGE</title>
+            <title>Admin Login</title>
         </head>
+        
     <body>
         <form id="login-form">
             <h1 class="h1">Login</h1>
@@ -18,5 +30,17 @@
         <div id="message"></div>
     </body>
     <script src="admin.login.js"></script>
-    </script>
+    <script>
+        // Block Ctrl + Scroll and pinch zoom
+        document.addEventListener('wheel', function (e) {
+          if (e.ctrlKey) e.preventDefault();
+        }, { passive: false });
+    
+        document.addEventListener('gesturestart', function (e) {
+          e.preventDefault();
+        });
+      </script>
+ 
+
+
 </html>
