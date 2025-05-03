@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+    <style>
+        /* Prevent font-based zooming on iOS */
+        input, button, select, textarea {
+          font-size: 16px;
+        }
+    
+        html, body {
+          touch-action: manipulation;
+        }
+      </style>
     <link href="home.css" rel="stylesheet">
     <title>Home PAGE</title>
 </head>
@@ -102,6 +112,16 @@
           });
         });
         </script>
+          <script>
+            // Block Ctrl + Scroll and pinch zoom
+            document.addEventListener('wheel', function (e) {
+              if (e.ctrlKey) e.preventDefault();
+            }, { passive: false });
+        
+            document.addEventListener('gesturestart', function (e) {
+              e.preventDefault();
+            });
+          </script>
     <script type="module" src="index.js" defer></script>
     <script type="module" src="firebase-config.js"></script>
 </body>
