@@ -2,10 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+  <style>
+      /* Prevent font-based zooming on iOS */
+      input, button, select, textarea {
+        font-size: 16px;
+      }
+  
+      html, body {
+        touch-action: manipulation;
+      }
+    </style>
   <link href="admin.css" rel="stylesheet" />
-  <title>Admin PAGE</title>
+  <title>Admin Page</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
   <!-- Flatpickr CSS -->
@@ -173,6 +183,16 @@
 
   <script type="module" src="firebase-config.js"></script>
   <script type="module" src="admin.js"></script>
+  <script>
+    // Block Ctrl + Scroll and pinch zoom
+    document.addEventListener('wheel', function (e) {
+      if (e.ctrlKey) e.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener('gesturestart', function (e) {
+      e.preventDefault();
+    });
+  </script>
 </body>
 
 </html>
