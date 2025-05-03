@@ -2,10 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+    <style>
+        /* Prevent font-based zooming on iOS */
+        input, button, select, textarea {
+          font-size: 16px;
+        }
+    
+        html, body {
+          touch-action: manipulation;
+        }
+      </style>
     <link href="contact-us.css" rel="stylesheet">
-    <title>Contact Us PAGE</title>
+    <title>Contact Us Page</title>
 </head>
 <body>
 <div class="divaaa">
@@ -175,5 +185,15 @@ any questions you have
 </footer>
 
     <script type="module" src="contac-us.js" defer></script>
+    <script>
+        // Block Ctrl + Scroll and pinch zoom
+        document.addEventListener('wheel', function (e) {
+          if (e.ctrlKey) e.preventDefault();
+        }, { passive: false });
+    
+        document.addEventListener('gesturestart', function (e) {
+          e.preventDefault();
+        });
+      </script>
 </body>
 </html>
