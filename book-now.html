@@ -99,7 +99,7 @@ Session!!
             <div class="separator"></div>
             
             <div class="apple-calendar-shower" id="at-media">
-              <label class="dataaa" for="linked-date">Select Booking Date</label><br />
+              <label class="dataaa" for="linked-date">MM/DD/YY</label><br />
               <input type="text" id="linked-date2" class="apple-date" />
      
             </div>
@@ -133,17 +133,25 @@ Session!!
     <span class="close">&times;</span>
 
     <!-- Category Filters -->
-    <div class="piercing-filters">
-      <div class="filter-btn active" data-category="Featured Services">Featured Piercings</div>
-      <div class="filter-btn" data-category="Advanced Ear Piercing">Advanced Ear Piercings</div>
-      <div class="filter-btn" data-category="Tattoo & Piercing">Tattoos/ Piercings</div>
-      <div class="filter-btn" data-category="Ear Piercings">Ear <br>Piercings</div>
-      <div class="filter-btn" data-category="Nose Piercings">Nose Piercings</div>
-      <div class="filter-btn" data-category="Portrait Piercing">Portrait Piercings</div>
-      <div class="filter-btn" data-category="Dermals">Dermal Piercings</div>
-      <div class="filter-btn" data-category="18+ Piercing">18+ <br>Piercings</div>
-      
+    <div id="openPiercingModalBtn">Open Piercing Filters</div>
+    <p id="piercingTypeDisplay" class="typoo">Type of piercing: Featured Piercings</p>
+
+    <div class="piercing-modal-wrapper" >
+ 
+ 
+        <div class="piercing-filters">
+          <div class="filter-btn active" data-category="Featured Services">Featured Piercings</div>
+          <div class="filter-btn" data-category="Advanced Ear Piercing">Advanced Ear Piercings</div>
+          <div class="filter-btn" data-category="Tattoo & Piercing">Tattoos/ Piercings</div>
+          <div class="filter-btn" data-category="Ear Piercings">Ear <br>Piercings</div>
+          <div class="filter-btn" data-category="Nose Piercings">Nose Piercings</div>
+          <div class="filter-btn" data-category="Portrait Piercing">Portrait Piercings</div>
+          <div class="filter-btn" data-category="Dermals">Dermal Piercings</div>
+          <div class="filter-btn" data-category="18+ Piercing">18+ <br>Piercings</div>
+        </div>
+ 
     </div>
+  
 
     <!-- Dynamic piercing options -->
     <div class="type-of-piercing" id="piercingContainer"></div>
@@ -194,7 +202,7 @@ Session!!
           <!-- Apple-style date picker -->
     
           <div class="apple-calendar-shower">
-            <label class="dataaa" for="linked-date">Select Booking Date</label><br />
+            <label class="dataaa" for="linked-date">MM/DD/YY</label><br />
             <input type="text" id="linked-date" class="apple-date" />
             <div id="inline-calendar"></div>
           </div>
