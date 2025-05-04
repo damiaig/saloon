@@ -568,15 +568,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const startOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
   
   // Set the end of three weeks from today
-  const endOfThreeWeeks = new Date(startOfToday);
-  endOfThreeWeeks.setDate(endOfThreeWeeks.getDate() + 20); // 3 weeks = 21 days total
+ 
 let calendarInstance;
   // Initialize flatpickr with month-day format
   async function initCalendar(preselectedDates = []) {
     const today = new Date();
     const startOfToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-    const endOfThreeWeeks = new Date(startOfToday);
-    endOfThreeWeeks.setDate(endOfThreeWeeks.getDate() + 20); // 3 weeks = 21 days total
+ 
   
     // Convert preselectedDates to an array of Date objects
     const validDates = preselectedDates.map(doc => {
@@ -593,7 +591,7 @@ let calendarInstance;
       inline: true,
       mode: "multiple",
       minDate: startOfToday, // Don't allow past days
-      maxDate: endOfThreeWeeks, // Allow 3 weeks from today
+   
       defaultDate: validDates,
       dateFormat: "m-d", // Format as month-day
       disable: [
