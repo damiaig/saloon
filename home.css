@@ -12,7 +12,8 @@ body {
     color: #980c0c;
 }
 
-
+html{
+    overflow-x: hidden !important;}
 
 ul {
     font-family: "SF Pro Text";
