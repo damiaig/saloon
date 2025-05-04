@@ -1086,7 +1086,7 @@ top: 10px !important;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-left: auto;
-  height:300px;
+  height:250px !important;
   overflow-y:auto;
   margin-right: auto;
   border-radius: 15px;
