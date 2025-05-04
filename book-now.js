@@ -508,7 +508,8 @@ const piercings = {
     { name: "Bellybutton Piercing", minutes: 30, price: 20000, type: "Featured" },
     { name: "Numbing", minutes: 50, price: 5000, type: "Featured", note: "Starting from" },
     { name: "Jewelry Change", minutes: 30, price: 3000, type: "Featured", note: "Excludes jewelry price" },
-    { name: "Consult-ation", minutes: 30, price: 6000, type: "Service" },  ],
+    { name: "Consultation", minutes: 30, price: 6000, type: "Service" }
+  ],
 
   "Advanced Ear Piercing": [
     { name: "Transverse Lobe", minutes: 30, price: 9000, type: "Advanced Ear" },
@@ -523,7 +524,7 @@ const piercings = {
     { name: "Numbing", minutes: 50, price: 5000, type: "Service", note: "Starting from" },
     { name: "Jewelry Change", minutes: 30, price: 3000, type: "Service", note: "Excludes jewelry price" },
     { name: "Cleaning Piercing", minutes: 30, price: 3000, type: "Service" },
-    { name: "Consult-ation", minutes: 30, price: 6000, type: "Service" },
+    { name: "Consultation", minutes: 30, price: 6000, type: "Service" },
   ],
 
   "Ear Piercings": [
@@ -667,13 +668,22 @@ const piercings = {
       div.classList.add("select-pierce");
   
       const piercingType = item.type || "Not specified";
-  
+
+      
+      let displayName = item.name;
+      if (item.name === "Consultation") {
+        displayName = window.innerWidth < 359 ? "Consult-ation" : "Consultation";
+      }
+      
+
       div.innerHTML = `
-        <h4>${item.name}</h4>
+        <h4>${displayName}</h4>
         <p>Type: ${piercingType}</p>
         <p>₦${item.price}</p>
         <p>${item.minutes}mins</p>
       `;
+      
+    
   
       div.addEventListener("click", () => {
         const index = selectedPiercings.findIndex(p => p.name === item.name && p.price === item.price);
@@ -1120,4 +1130,38 @@ document.getElementById("payAndBook").onclick = function () {
 
 
 
+    
+    const openModalBtn = document.getElementById('openPiercingModalBtn');
+    const modalWrapper = document.querySelector('.piercing-modal-wrapper');
+  
+    openModalBtn.addEventListener('click', () => {
+      modalWrapper.style.display = 'block';
+    });
+  
+    window.addEventListener('click', (e) => {
+      if (e.target === modalWrapper) {
+        modalWrapper.style.display = 'none';
+      }
+    });
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+    
+        // Add active class to clicked one
+        button.classList.add("active");
+    
+        const selectedCategory = button.getAttribute("data-category");
+    
+        // Update display text
+        piercingTypeDisplay.textContent = `Type of piercing: ${selectedCategory}`;
+    
+        // Render piercings
+        renderPiercings(selectedCategory);
+    
+        // Hide modal
+        modalWrapper.style.display = 'none';
+
+      });
+    });
     
