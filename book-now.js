@@ -684,23 +684,24 @@ const piercings = {
       `;
       
     
-  
-      div.addEventListener("click", () => {
-        const index = selectedPiercings.findIndex(p => p.name === item.name && p.price === item.price);
+   
+        div.addEventListener("click", () => {
+          const index = selectedPiercings.findIndex(p => p.name === item.name && p.price === item.price);
+        
+          if (index > -1) {
+            // Item already selected — increment quantity
+            selectedPiercings[index].quantity += 1;
+          } else {
+            // New selection
+            selectedPiercings.push({ ...item, quantity: 1 });
+          }
+        
+          div.classList.add("selected"); // Optional: style logic here
+          updateSelectedListAndTotal();
+        });
+        
       
-        if (index > -1) {
-          // Item is already selected — remove it and reset quantity
-          delete selectedPiercings[index].quantity; // clear quantity
-          selectedPiercings.splice(index, 1);       // remove from list
-          div.classList.remove("selected");
-        } else {
-          // Item is not selected — add it and initialize quantity later
-          selectedPiercings.push(item);
-          div.classList.add("selected");
-        }
-      
-        updateSelectedListAndTotal();
-      });
+    
       
   
       container.appendChild(div);
@@ -906,17 +907,16 @@ const piercingMap = {};
 const minutesMap = {}; // Initialize here
 
 selectedPiercings.forEach(p => {
-  if (piercingMap[p.name]) {
-    piercingMap[p.name].quantity += 1;
-  } else {
-    piercingMap[p.name] = { price: p.price, quantity: 1 };
-  }
+  piercingMap[p.name] = {
+    price: p.price,
+    quantity: p.quantity // ✅ Use actual quantity from object
+  };
 
-  // Fill minutesMap only once per unique piercing name
   if (!minutesMap[p.name]) {
-    minutesMap[p.name] = p.minutes;
+    minutesMap[p.name] = p.minutes * p.quantity; // ⬅ multiply by quantity
   }
 });
+
 
 
 // Step 2: Create formatted piercing list with quantity
