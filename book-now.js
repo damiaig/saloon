@@ -981,6 +981,11 @@ estimatedFinishTime: estimatedFinishStr
 };
 
 document.getElementById("payAndBook").onclick = function () {
+
+  const button = this;
+  button.disabled = true;
+  button.innerText = "Processing...";
+
   const handler = PaystackPop.setup({
     key: 'pk_test_cb3826dfb6732cf27093aa151b352fb821871dc7',
     email: formData.email,
@@ -1024,7 +1029,7 @@ document.getElementById("payAndBook").onclick = function () {
           alert(`✅ Payment received! Booking confirmed.\nYour booking code is ${bookingCode}`);
           confirmationModal.scrollIntoView({ behavior: "smooth" });
 
-          setTimeout(() => location.reload(), 15000);
+          setTimeout(() => location.reload(), 10000);
         } catch (error) {
           console.error("❌ Error saving booking: ", error);
           alert("Something went wrong. Payment went through but booking wasn't saved. Contact admin.");
@@ -1033,6 +1038,9 @@ document.getElementById("payAndBook").onclick = function () {
     },
     onClose: function () {
       alert('Payment was not completed. Booking was not made.');
+      
+      button.disabled = false;
+      button.innerText = "Pay & Book";
     }
   });
 
@@ -1042,6 +1050,10 @@ document.getElementById("payAndBook").onclick = function () {
   
 
   document.getElementById("bookInAdvance").onclick = async function () {
+
+    const button = this;
+    button.disabled = true;
+    button.innerText = "Processing...";
     // 1. Generate a 6-digit code
     const bookingCode = Math.floor(100000 + Math.random() * 900000).toString();
   
@@ -1075,12 +1087,14 @@ document.getElementById("payAndBook").onclick = function () {
   
       setTimeout(() => {
         location.reload();
-      }, 15000);
+      }, 10000);
       
 
     } catch (error) {
       console.error("❌ Error adding document: ", error);
       alert("Something went wrong while booking. Error details: " + error.message);
+      button.disabled = false;
+      button.innerText = "Book in Advance";
     }
   };
 
