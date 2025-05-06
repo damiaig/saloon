@@ -263,11 +263,11 @@ Session!!
     
       // Enforce maxlength for full name and email
       fullName.addEventListener("input", () => {
-        fullName.value = fullName.value.slice(0, 25);
+        fullName.value = fullName.value.slice(0, 30);
       });
     
       email.addEventListener("input", () => {
-        email.value = email.value.slice(0, 40);
+        email.value = email.value.slice(0, 50);
       });
     
       // Allow only numbers for phone number, enforce 15 max digits
