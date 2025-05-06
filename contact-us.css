@@ -150,16 +150,7 @@ header {
 }
 
 
-@media (max-width: 700px) {
-.logo {
- 
-    height:50px;
-    position: relative;
-    left:25px;
- margin-right: auto !important;
-    margin-left: auto !important;
-  
-}}
+
 
 .mapp{
  
@@ -201,7 +192,7 @@ nav ul {
     margin: 0;
     font-size: 18px !important;
     display: flex;
-    gap: 35px;
+    gap: 25px;
 }
 
 nav ul li {
