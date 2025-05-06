@@ -292,13 +292,12 @@ margin-right: auto;
     .mapp {
         right:5px;
         top:-7px;}
-    .logoo {
- top:-7px;
- left:40px;
- 
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .logoo {
+          top:-6px;
+          left:35px;
+                 margin-left: auto;
+                 margin-right: auto;
+             }
 
     .logo {
         margin-left: auto;
