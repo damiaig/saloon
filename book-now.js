@@ -1018,18 +1018,22 @@ document.getElementById("payAndBook").onclick = function () {
           console.log("Document saved with ID:", docRef.id);
 
           confirmationDetails.innerHTML += `
-            <div id="confirmation">
-              <div class="code">
-                <h1>${bookingCode}</h1>
-                <small>✅ Payment successful. Please screenshot this code as proof of booking.</small>
-              </div>
+          <div id="confirmation">
+            <div class="code">
+              <h1>${bookingCode}</h1>
+              <p><strong>Selected Time:</strong> ${formData.appointmentTime}</p>
+              <p><strong>Selected Date:</strong> ${formData.appointmentDate}</p>
+              <small>✅ Payment successful. Please screenshot this code as proof of booking.</small>
+           
             </div>
-          `;
+          </div>
+        `;
+        
 
           alert(`✅ Payment received! Booking confirmed.\nYour booking code is ${bookingCode}`);
           confirmationModal.scrollIntoView({ behavior: "smooth" });
 
-          setTimeout(() => location.reload(), 10000);
+          setTimeout(() => location.reload(), 12000);
         } catch (error) {
           console.error("❌ Error saving booking: ", error);
           alert("Something went wrong. Payment went through but booking wasn't saved. Contact admin.");
@@ -1072,13 +1076,16 @@ document.getElementById("payAndBook").onclick = function () {
   
       // 4. Show confirmation with code
       confirmationDetails.innerHTML += `
-      <div id="confirmation" >
-      <div class="code">
-      <h1>${bookingCode}</h1>
-      <small>Please screenshot this code as proof of booking.</small>
-    </div>
+      <div id="confirmation">
+        <div class="code">
+        <h1>${bookingCode}</h1>
+        <p><strong>Selected Time:</strong> ${formData.appointmentTime}</p>
+        <p><strong>Selected Date:</strong> ${formData.appointmentDate}</p>
+         <small>Please screenshot this code as proof of booking.</small>
+         </div>
+      </div>
+    `;
     
-      `;
   
       alert(`📌 Booking confirmed! Please screenshot the code shown and make your payment before the appointment    ${bookingCode}.`);
   
@@ -1087,7 +1094,7 @@ document.getElementById("payAndBook").onclick = function () {
   
       setTimeout(() => {
         location.reload();
-      }, 10000);
+      }, 12000);
       
 
     } catch (error) {
