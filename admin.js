@@ -1,4 +1,4 @@
-import { db, storage } from "./firebase-config.js";
+import { db, storage, auth } from "./firebase-config.js";
 import {
   getStorage,
   ref,
@@ -6,6 +6,10 @@ import {
   getDownloadURL,
   deleteObject
 } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-storage.js";
+
+import {
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
 
 import {
   getFirestore,
@@ -20,13 +24,49 @@ import {
   doc
 } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js";
 
-const storedCode = sessionStorage.getItem("adminCode");
+ 
 
-if (storedCode !== "9876546789876") {
-  // Not authorized — clear any session data and redirect
-  sessionStorage.clear();
-  window.location.href = "admin.login.html";
-}
+onAuthStateChanged(auth, async (user) => {
+  if (!user) {
+    // Redirect unauthenticated users
+    sessionStorage.clear();
+    window.location.href = "admin.login.html";
+    return;
+  }
+
+  // If user is logged in, check admin validation
+  const sessionCode = sessionStorage.getItem("adminCode");
+  if (!sessionCode) {
+    sessionStorage.clear();
+    window.location.href = "admin.login.html";
+    return;
+  }
+
+  const adminDocRef = doc(db, "adminAccess", user.uid);
+  const adminDocSnap = await getDoc(adminDocRef);
+
+  // If user is not an admin or the code doesn't match, log them out
+  if (!adminDocSnap.exists() || adminDocSnap.data().code !== sessionCode) {
+    sessionStorage.clear();
+    window.location.href = "admin.login.html";
+    return;
+  }
+
+  // Admin validated, now load messages
+ 
+});
+
+
+onAuthStateChanged(auth, async (user) => {
+  if (!user) {
+    console.log("User is not authenticated.");
+    sessionStorage.clear();
+    window.location.href = "admin.login.html";
+    return;
+  }
+  console.log("User is authenticated:", user);
+  // Continue with admin validation...
+});
 
 
 const photoInput = document.getElementById("photoInput");
