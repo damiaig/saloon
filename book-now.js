@@ -980,11 +980,19 @@ EstimatedTime: `${totalMinutes}`,
 estimatedFinishTime: estimatedFinishStr
 };
 
-document.getElementById("payAndBook").onclick = function () {
+let payClicked = false;
+let bookClicked = false;
 
-  const button = this;
-  button.disabled = true;
-  button.innerText = "Processing...";
+const payButton = document.getElementById("payAndBook");
+const bookButton = document.getElementById("bookInAdvance");
+
+payButton.onclick = function () {
+  if (payClicked || bookClicked) return;
+  payClicked = true;
+
+  payButton.disabled = true;
+  bookButton.disabled = true;
+  payButton.innerText = "Processing...";
 
   const handler = PaystackPop.setup({
     key: 'pk_test_cb3826dfb6732cf27093aa151b352fb821871dc7',
@@ -1001,10 +1009,8 @@ document.getElementById("payAndBook").onclick = function () {
       ]
     },
     callback: function (response) {
-      // Move the async logic into an IIFE (Immediately Invoked Function Expression)
       (async () => {
         const bookingCode = Math.floor(100000 + Math.random() * 900000).toString();
-
         const fullData = {
           ...formData,
           bookingType: "Pay & Book",
@@ -1018,17 +1024,15 @@ document.getElementById("payAndBook").onclick = function () {
           console.log("Document saved with ID:", docRef.id);
 
           confirmationDetails.innerHTML += `
-          <div id="confirmation">
-            <div class="code">
-              <h1>${bookingCode}</h1>
-              <p><strong>Selected Time:</strong> ${formData.appointmentTime}</p>
-              <p><strong>Selected Date:</strong> ${formData.appointmentDate}</p>
-              <small>✅ Payment successful. Please screenshot this code as proof of booking.</small>
-           
+            <div id="confirmation">
+              <div class="code">
+                <h1>${bookingCode}</h1>
+                <p><strong>Selected Time:</strong> ${formData.appointmentTime}</p>
+                <p><strong>Selected Date:</strong> ${formData.appointmentDate}</p>
+                <small>✅ Payment successful. Please screenshot this code as proof of booking.</small>
+              </div>
             </div>
-          </div>
-        `;
-        
+          `;
 
           alert(`✅ Payment received! Booking confirmed.\nYour booking code is ${bookingCode}`);
           confirmationModal.scrollIntoView({ behavior: "smooth" });
@@ -1042,68 +1046,67 @@ document.getElementById("payAndBook").onclick = function () {
     },
     onClose: function () {
       alert('Payment was not completed. Booking was not made.');
-      
-      button.disabled = false;
-      button.innerText = "Pay & Book";
+
+      // Reset both buttons and flags
+      payButton.disabled = false;
+      bookButton.disabled = false;
+      payButton.innerText = "Pay & Book";
+      payClicked = false;
     }
   });
 
   handler.openIframe();
 };
 
-  
 
-  document.getElementById("bookInAdvance").onclick = async function () {
+bookButton.onclick = async function () {
+  if (payClicked || bookClicked) return;
+  bookClicked = true;
 
-    const button = this;
-    button.disabled = true;
-    button.innerText = "Processing...";
-    // 1. Generate a 6-digit code
-    const bookingCode = Math.floor(100000 + Math.random() * 900000).toString();
-  
-    // 2. Add the extra details
-    const fullData = {
-      ...formData,
-      bookingType: "Book in Advance",
-      bookingCode,
-      timestamp: new Date()
-    };
-  
-    try {
-      // 3. Store in Firestore under "orders"
-      const docRef = await addDoc(collection(db, "orders"), fullData);
-      console.log("Document written with ID: ", docRef.id);
-  
-      // 4. Show confirmation with code
-      confirmationDetails.innerHTML += `
+  payButton.disabled = true;
+  bookButton.disabled = true;
+  bookButton.innerText = "Processing...";
+
+  const bookingCode = Math.floor(100000 + Math.random() * 900000).toString();
+  const fullData = {
+    ...formData,
+    bookingType: "Book in Advance",
+    bookingCode,
+    timestamp: new Date()
+  };
+
+  try {
+    const docRef = await addDoc(collection(db, "orders"), fullData);
+    console.log("Document written with ID: ", docRef.id);
+
+    confirmationDetails.innerHTML += `
       <div id="confirmation">
         <div class="code">
-        <h1>${bookingCode}</h1>
-        <p><strong>Selected Time:</strong> ${formData.appointmentTime}</p>
-        <p><strong>Selected Date:</strong> ${formData.appointmentDate}</p>
-         <small>Please screenshot this code as proof of booking.</small>
-         </div>
+          <h1>${bookingCode}</h1>
+          <p><strong>Selected Time:</strong> ${formData.appointmentTime}</p>
+          <p><strong>Selected Date:</strong> ${formData.appointmentDate}</p>
+          <small>Please screenshot this code as proof of booking.</small>
+        </div>
       </div>
     `;
-    
-  
-      alert(`📌 Booking confirmed! Please screenshot the code shown and make your payment before the appointment    ${bookingCode}.`);
-  
-      // Optional: Scroll to modal or highlight it
-      confirmationModal.scrollIntoView({ behavior: "smooth" });
-  
-      setTimeout(() => {
-        location.reload();
-      }, 12000);
-      
 
-    } catch (error) {
-      console.error("❌ Error adding document: ", error);
-      alert("Something went wrong while booking. Error details: " + error.message);
-      button.disabled = false;
-      button.innerText = "Book in Advance";
-    }
-  };
+    alert(`📌 Booking confirmed! Please screenshot the code shown and make your payment before the appointment ${bookingCode}.`);
+    confirmationModal.scrollIntoView({ behavior: "smooth" });
+
+    setTimeout(() => location.reload(), 12000);
+
+  } catch (error) {
+    console.error("❌ Error adding document: ", error);
+    alert("Something went wrong while booking. Error details: " + error.message);
+
+    // Reset if failed
+    payButton.disabled = false;
+    bookButton.disabled = false;
+    bookButton.innerText = "Book in Advance";
+    bookClicked = false;
+  }
+};
+
 
   // Close modal manually
   document.querySelector(".close-confirm").onclick = function () {
