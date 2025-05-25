@@ -72,10 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // WhatsApp buttons
 document.querySelectorAll(".whatsapp, .whatsap").forEach(el =>
     el.addEventListener("click", () => {
-        const whatsappUrl = "https://wa.me/2347077403684?text=Hello%20Dami%2C%20I'm%20interested%20in%20your%20services";
+        const whatsappUrl = "https://wa.me/2347077403684?text=Hello%20Ifueko%2C%20I'm%20interested%20in%20your%20services";
         window.open(whatsappUrl, "_blank");
     })
   );
+  
   
   
 });
