@@ -1,23 +1,6 @@
 // firebase-config.js
-import { getStorage } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-storage.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js"; 
-import { getAuth } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
-
+import{getStorage as e}from"https://www.gstatic.com/firebasejs/9.16.0/firebase-storage.js";import{initializeApp as s}from"https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";import{getFirestore as t}from"https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js";import{getAuth as a}from"https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
 // Replace with your own config
-const firebaseConfig = {
-    apiKey: "AIzaSyCNICRxGwTzDOwnYlpw1_CfzwMBdQ7Hvkk",
-    authDomain: "piercing-b9a07.firebaseapp.com",
-    projectId: "piercing-b9a07",
-    storageBucket: "piercing-b9a07.firebasestorage.app",
-    messagingSenderId: "158023000213",
-    appId: "1:158023000213:web:c62baf9aa1bfc886de7b9c",
-    measurementId: "G-N0LGRLJ43S"
-};
-
+const r={t:"AIzaSyCNICRxGwTzDOwnYlpw1_CfzwMBdQ7Hvkk",i:"piercing-b9a07.firebaseapp.com",o:"piercing-b9a07",p:"piercing-b9a07.firebasestorage.app",m:"158023000213",g:"1:158023000213:web:c62baf9aa1bfc886de7b9c",j:"G-N0LGRLJ43S"};
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-export const storage = getStorage(app);
-export const auth = getAuth(app);
-
+const i=s(r);export const db=t(i);export const storage=e(i);export const auth=a(i);
