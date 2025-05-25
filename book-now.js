@@ -10,7 +10,7 @@ window.open(e,"_blank")}));
 // Instagram
 // WhatsApp buttons (currently using tel - update if needed)
 // WhatsApp buttons
-document.querySelectorAll(".whatsapp, .whatsap").forEach(e=>e.addEventListener("click",()=>{const e="https://wa.me/2347077403684?text=Hello%20Dami%2C%20I'm%20interested%20in%20your%20services";window.open(e,"_blank")}));async function l(){const e=B(I,"schedule");// your Firestore collection
+document.querySelectorAll(".whatsapp, .whatsap").forEach(e=>e.addEventListener("click",()=>{const e="https://wa.me/2347077403684?text=Hello%20Ifueko%2C%20I'm%20interested%20in%20your%20services";window.open(e,"_blank")}));async function l(){const e=B(I,"schedule");// your Firestore collection
 const t=await d(e);const n={};// Use an object to map date -> { start, end }
 t.forEach(e=>{const t=e.data();// e.g., { availableDays: { "4-29": { start: "10:00", end: "14:00" }, ... } }
 if(t.availableDays){Object.entries(t.availableDays).forEach(([e,t])=>{n[e]=t;// { start, end }
