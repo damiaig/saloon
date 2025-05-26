@@ -1,11 +1,70 @@
-import{db as e}from'./firebase-config.js';import{collection as o,getDocs as s,updateDoc as t,doc as n,query as c,orderBy as i,getDoc as r}from"https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js";import{getAuth as a,signInWithEmailAndPassword as m}from'https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js';const d=a();const w=document.getElementById("login-form");const f=document.querySelector(".email");const g=document.querySelector(".password");const p=document.getElementById("message");const u=document.getElementById("toggle-password");w.addEventListener("submit",function(o){o.preventDefault();
-// Get email and password
-const s=f.value.trim().toLowerCase();const t=g.value;
-// Authenticate using Firebase Authentication
-m(d,s,t).then(o=>{
-// Successfully logged in
-const t=o.user;console.log("User logged in:",t);
-// Retrieve the admin code from Firestore after successful login
-const s=n(e,"adminAccess",t.uid);r(s).then(o=>{if(o.exists()){const s=o.data().code;sessionStorage.setItem("adminCode",s);window.location.href="admin.html"}else{console.log("No admin document found",t.uid);l("Unauthorized access!")}})})["catch"](o=>{console.error("Error logging in:",o);l("Incorrect email or password!")})});function l(o){p.textContent=o;p.classList.add("show");setTimeout(()=>{p.classList.remove("show")},3e3)}
+import { db } from './firebase-config.js';
+import {
+  collection,
+  getDocs,
+  updateDoc,
+  doc,
+  query,
+  orderBy,
+  getDoc
+} from "https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js";
+
+import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js';
+
+const auth = getAuth();
+
+const form = document.getElementById("login-form");
+const emailInput = document.querySelector(".email");
+const passwordInput = document.querySelector(".password");
+const message = document.getElementById("message");
+const togglePassword = document.getElementById("toggle-password");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Get email and password
+  const email = emailInput.value.trim().toLowerCase();
+  const password = passwordInput.value;
+
+  // Authenticate using Firebase Authentication
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Successfully logged in
+      const user = userCredential.user;
+      console.log("User logged in:", user);
+
+      // Retrieve the admin code from Firestore after successful login
+ 
+      const docRef = doc(db, "adminAccess", user.uid);
+      getDoc(docRef).then((docSnap) => {
+        if (docSnap.exists()) {
+          const adminCode = docSnap.data().code;
+          sessionStorage.setItem("adminCode", adminCode);
+          window.location.href = "admin.html";
+        } else {
+          console.log("No admin document found", user.uid);
+          showMessage("Unauthorized access!");
+        }
+      });
+    })
+    .catch((error) => {
+      console.error("Error logging in:", error);
+      showMessage("Incorrect email or password!");
+    });
+});
+
+function showMessage(msg) {
+  message.textContent = msg;
+  message.classList.add("show");
+
+  setTimeout(() => {
+    message.classList.remove("show");
+  }, 3000);
+}
+
 // Toggle show/hide password
-u.addEventListener("click",()=>{const o=g.getAttribute("type")==="password"?"text":"password";g.setAttribute("type",o);u.textContent=o==="password"?"Show Password":"Hide Password"});
+togglePassword.addEventListener("click", () => {
+  const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+  passwordInput.setAttribute("type", type);
+  togglePassword.textContent = type === "password" ? "Show Password" : "Hide Password";
+});
