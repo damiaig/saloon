@@ -504,7 +504,7 @@ window.addEventListener('click', (e) => {
 const piercings = {
   "Featured Services": [
     { name: "Helix", minutes: 30, price: 10000, type: "Featured" },
-    { name: "Lobe", minutes: 30, price: 6000, type: "Featured", note: "Per ear" },
+    { name: "Lobe", minutes: 15, price: 6000, type: "Featured", note: "Per ear" },
     { name: "Bellybutton Piercing", minutes: 30, price: 20000, type: "Featured" },
     { name: "Numbing", minutes: 50, price: 5000, type: "Featured", note: "Starting from" },
     { name: "Jewelry Change", minutes: 30, price: 3000, type: "Featured", note: "Excludes jewelry price" }
