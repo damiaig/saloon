@@ -507,8 +507,7 @@ const piercings = {
     { name: "Lobe", minutes: 30, price: 6000, type: "Featured", note: "Per ear" },
     { name: "Bellybutton Piercing", minutes: 30, price: 20000, type: "Featured" },
     { name: "Numbing", minutes: 50, price: 5000, type: "Featured", note: "Starting from" },
-    { name: "Jewelry Change", minutes: 30, price: 3000, type: "Featured", note: "Excludes jewelry price" },
-    { name: "Consultation", minutes: 30, price: 6000, type: "Service" }
+    { name: "Jewelry Change", minutes: 30, price: 3000, type: "Featured", note: "Excludes jewelry price" }
   ],
 
   "Advanced Ear Piercing": [
@@ -523,12 +522,11 @@ const piercings = {
   "Tattoo & Piercing": [
     { name: "Numbing", minutes: 50, price: 5000, type: "Service", note: "Starting from" },
     { name: "Jewelry Change", minutes: 30, price: 3000, type: "Service", note: "Excludes jewelry price" },
-    { name: "Cleaning Piercing", minutes: 30, price: 3000, type: "Service" },
-    { name: "Consultation", minutes: 30, price: 6000, type: "Service" },
+    { name: "Cleaning Piercing", minutes: 30, price: 3000, type: "Service" }
   ],
 
   "Ear Piercings": [
-    { name: "Lobe", minutes: 30, price: 6000, type: "Ear", note: "Per ear" },
+    { name: "Lobe", minutes: 15, price: 6000, type: "Ear", note: "Per ear" },
     { name: "Helix", minutes: 30, price: 10000, type: "Ear" },
     { name: "Tragus", minutes: 30, price: 10000, type: "Ear" },
     { name: "Flat", minutes: 30, price: 10000, type: "Ear" },
